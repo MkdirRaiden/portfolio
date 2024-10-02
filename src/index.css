@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gustavo";
+  src: url('/fonts/Gustavo-regular.otf');
+}
+
+:root
+{
+  --font-playfair: "Playfair Display", serif;
+  --font-poppins: "Poppins", sans-serif;
+ color: #aec4fd;
+}
+
+*
+{
+  scroll-behavior: smooth;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: black;
+  transition: .25s ease;
+}
+.inputClass {
+  border: 3px solid #618dfb;
+  background-color: whitesmoke;
+}
+.inputClass:focus{
+  border-width: 2px;
+}
+
+.common-padding {
+  @apply py-10 md:px-32 md:py-28 px-4 ;
+}
+.wh-full {
+  @apply w-full h-full;
+}
+
+  .active {
+    @apply text-white
+  }
+
+  .skill-card-bg1 {
+    background-image: linear-gradient(to right bottom, #000000, #1c1c1c, #343333, #a1bbff, #4479fd);
+  }
+  .skill-card-bg2 {
+    background-image: linear-gradient(to bottom, #000000, #1c1c1c, #343333, #a1bbff, #4479fd);
+  }
+  .skill-card-bg3 {
+    background-image: linear-gradient(to left bottom, #000000, #1c1c1c, #343333, #a1bbff, #4479fd);
+  }
+  .card-wrap {
+    filter: drop-shadow(1px 26px 60px rgba(77, 77, 67, 0.5));
+  }
+  /* .hero-blur-bg {
+    background-image: linear-gradient(to top, #1f1f1f, #191919, #131313, #0b0b0b, #000000);
+  } */
+
+.primary-outline-path {
+  stroke-dasharray: 0, 0, 0, 518.179;
+  stroke-dashoffset: 0%;
+  stroke-width: 1;
+  stroke:white;
+  opacity: 0.35;
+  animation: animate 2.25s ease forwards;
+  transition:  ease ;
+}
+
+.primary-outline:hover > path{
+  opacity: .85;
+  stroke: #a1bbff;
+
+}
+
+.octagon {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
+  border-radius: 10%;
+}
+
+.hexagon-v {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.hexagon-h {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+}
+.curve {
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
+}
+
+.hero-bg-animate {
+  animation: heroAnimate .5s ease forwards;
+}
+.hero-title-animate {
+  animation: heroTitleAnimate .5s ease;
+}
+
+@keyframes animate {
+  100% {
+    stroke-dasharray: 0, 203, 276.767, 35;
+  }
+}
+
+@keyframes heroAnimate {
+  0%{
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1.75);
+  }
+}
+@keyframes heroTitleAnimate {
+  0%{
+    opacity: 0;
+    transform: translateY(-3.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-1.5rem);
+  }
+}
+@keyframes animateShuttle {
+  0%{
+    scale: 1;
+    transform: translate(0%, 0%);
+  }
+  100% {
+    scale: .35;
+    transform: translate(-20%, -10%);
+  }
+}
+
+
+
+
+  
+
+
+
