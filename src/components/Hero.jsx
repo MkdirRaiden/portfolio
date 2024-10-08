@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <div className="wh-full top-0 left-0 absolute">
         <div className="absolute wh-full top-0 left-0">
-          <div className="absolute top-0 left-0 wh-full bg-black opacity-70" />
+          <div className="absolute top-0 left-0 wh-full bg-black opacity-50" />
           <img
             className="md:hidden block absolute left-0 bottom-20 scale-[1.75]"
             src={heroMoonBgImg}
