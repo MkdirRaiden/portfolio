@@ -3,7 +3,7 @@ import CustomButton from "./CustomButton";
 import gsap from "../../utils/gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef, useState } from "react";
-import { MdArrowRightAlt } from "react-icons/md";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const ShowcaseProject = ({
   subTitle1,
@@ -182,14 +182,16 @@ const ShowcaseProject = ({
           </Parallax>
         </div>
         <div className="md:mt-16 mt-4">
-          <div className="md:m-auto w-fit">
+          <div className="md:m-auto w-fit flex flex-col group relative">
             <a
-              className="border border-gray-800  octagon py-4 px-9 max-w-fit text-lg inline-flex items-center text-color-primary hover:underline hover:cursor-pointer"
+              className="octagon py-2 max-w-fit text-lg inline-flex items-center text-color-primary hover:cursor-pointer"
               href={link}
               target="_blank"
             >
-              <span>Visit website</span> <MdArrowRightAlt />
+              <span className="me-4">Visit website</span>{" "}
+              <FaArrowUpRightFromSquare />
             </a>
+            <span className="w-0 absolute bottom-0 h-[.15rem] bg-color-primary rounded-full group-hover:w-full group-hover:right-0 transition-all duration-300" />
           </div>
         </div>
       </div>
