@@ -43,7 +43,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="md:min-h-[100vh] min-h-[140vh] relative overflow-hidden border-t-4 border-gray-900"
+      className="md:min-h-[100vh] min-h-[140vh] relative overflow-hidden border-t-2 border-gray-900"
     >
       <div className="w-full md:block hidden h-36 z-[2] absolute -bottom-6 left-[50%] -translate-x-[50%]">
         <MotionSvg />
