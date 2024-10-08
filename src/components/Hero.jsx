@@ -1,4 +1,4 @@
-import { heroMoonBgImg } from "../utils";
+import { heroMoonBgImg, heroVideoSrc } from "../utils";
 import FloatingAstranaut from "./FloatingAstranaut";
 
 const Hero = () => {
@@ -8,14 +8,18 @@ const Hero = () => {
       className="relative w-full h-[100vh] overflow-hidden"
     >
       <div className="wh-full top-0 left-0 absolute">
-        <div className="scale-[1.5] md:block hidden hero-bg-animate">
-          <img src={heroMoonBgImg} alt="background image" width={"100%"} />
-        </div>
-        <div className="scale-[1.75] md:hidden block translate-y-96">
-          <img src={heroMoonBgImg} alt="background image" />
+        <div className="absolute wh-full top-0 left-0">
+          <div className="absolute top-0 left-0 wh-full bg-black opacity-70" />
+          <img
+            className="md:hidden block absolute left-0 bottom-20 scale-[1.75]"
+            src={heroMoonBgImg}
+            alt="background"
+          />
+          <video className="md:block hidden" autoPlay preload="auto">
+            <source src={heroVideoSrc} type="video/mp4" />
+          </video>
         </div>
       </div>
-
       <div className="relative wh-full z-[5] ">
         <div className="absolute wh-full top-0 left-0 pointer-events-none common-padding flex justify-center items-center"></div>
         <div className="wh-full">

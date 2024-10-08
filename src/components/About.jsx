@@ -43,21 +43,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="md:min-h-[100vh] min-h-[140vh] relative overflow-hidden octagon"
+      className="md:min-h-[100vh] min-h-[140vh] relative overflow-hidden"
     >
       <div className="w-full md:block hidden h-36 z-[2] absolute -bottom-6 left-[50%] -translate-x-[50%]">
         <MotionSvg />
       </div>{" "}
-      <div className="wh-full md:block hidden scale-[1.75] -translate-y-[17%] absolute -top-[87%] left-0 opacity-25">
-        <img src={heroMoonBgImg} alt="image" />
-      </div>
-      {/* <div
-        className="w-full h-52 absolute top-0 left-0"
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff)",
-        }}
-      /> */}
       <div className="wh-full common-padding absolute">
         <div className="flex max-sm:flex-col-reverse justify-around items-center">
           <div className=" md:w-2/3 w-full">
@@ -112,7 +102,7 @@ const About = () => {
               <img src={aboutImg} alt="avatar" />
               <div
                 id="title-image-show"
-                className=" bg-black absolute wh-full bottom-0 left-0"
+                className="bg-black absolute wh-full bottom-0 left-0 border border-gray-950"
               />
             </div>
           </div>

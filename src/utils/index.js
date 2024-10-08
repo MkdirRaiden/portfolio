@@ -1,6 +1,7 @@
 import twitterVideoSrc from "/videos/twitter.mp4";
 import appleVideoSrc from "/videos/apple.mp4";
 import brainwaveVideoSrc from "/videos/brainwave.mp4";
+import heroVideoSrc from "/videos/hero.mp4";
 
 import project2Img from "/images/more-projects/project2.gif";
 import project1Img from "/images/more-projects/project1.gif";
@@ -59,6 +60,7 @@ export {
   twitterVideoSrc,
   appleVideoSrc,
   brainwaveVideoSrc,
+  heroVideoSrc,
   asteroidImg,
   contactBg,
   aboutImg,

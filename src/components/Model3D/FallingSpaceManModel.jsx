@@ -22,7 +22,7 @@ const FallingSpaceManModel = forwardRef((props, ref) => {
 
   useLayoutEffect(() => {
     tl.current = gsap.timeline();
-    tl.current.to(ref.current.position, { y: -2.5, duration: 0.5 });
+    tl.current.to(ref.current.position, { y: -2, duration: 0.5 });
     tl.current.to(ref.current.rotation, { y: 0.5, duration: 0.5 });
   }, []);
 

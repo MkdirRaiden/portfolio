@@ -60,9 +60,6 @@ input, textarea {
   .card-wrap {
     filter: drop-shadow(1px 26px 60px rgba(77, 77, 67, 0.5));
   }
-  /* .hero-blur-bg {
-    background-image: linear-gradient(to top, #1f1f1f, #191919, #131313, #0b0b0b, #000000);
-  } */
 
 .primary-outline-path {
   stroke-dasharray: 0, 0, 0, 518.179;
