@@ -10,6 +10,7 @@ import project3Img from "/images/more-projects/project3.gif";
 import gtLogo from "/images/experience/gtLogo.png";
 import tuLogo from "/images/experience/tuLogo.png";
 import wgcLogo from "/images/experience/wgcLogo.png";
+import lcLogo from "/images/experience/leetcode.png";
 
 import heroNavImg from "/images/heroNav.jpg";
 import heroMoonBgImg from "/images/heroBgMoon.jpg";
@@ -51,6 +52,7 @@ import problemLogo from "/images/others/problem.png";
 import communicationLogo from "/images/others/communication.png";
 
 export {
+  lcLogo,
   gtLogo,
   tuLogo,
   wgcLogo,

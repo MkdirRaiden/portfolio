@@ -34,6 +34,7 @@ import {
   gtLogo,
   wgcLogo,
   tuLogo,
+  lcLogo,
 } from "../utils";
 
 export const navLinkItems = [
@@ -308,10 +309,10 @@ export const experienceEducation = [
   },
   {
     _id: 1,
-    name: "Web development",
-    icon: wgcLogo,
-    address: "Guwahati, Assam",
-    desc: "Worked as an application developer for about half a year building dynamic website. Learned jQuery, PHP and mysql along the process",
+    name: "Javascript",
+    icon: lcLogo,
+    address: "Online Course",
+    desc: "Has solved the 30 days javascript challenge on leetcode. It broadened my knowledge in javascript.",
     type: "education",
     date: "2024",
   },
