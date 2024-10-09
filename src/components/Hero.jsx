@@ -15,7 +15,12 @@ const Hero = () => {
             src={heroMoonBgImg}
             alt="background"
           />
-          <video className="md:block hidden" autoPlay>
+          <video
+            className="md:block hidden"
+            autoPlay
+            playsInline={true}
+            preload="auto"
+          >
             <source src={heroVideoSrc} type="video/mp4" />
           </video>
         </div>

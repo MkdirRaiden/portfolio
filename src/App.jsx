@@ -8,6 +8,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Toaster } from "react-hot-toast";
+import { useEffect } from "react";
 
 const App = () => {
   return (
