@@ -99,15 +99,13 @@ const ShowcaseProject = ({
               <span>{subTitle2}</span>
             </h2>
             {_id !== 0 && (
-              <div className="flex justify-center items-center gap-2 mt-2 md:ml-auto bg-color-bgDark w-20 h-10">
+              <div className="flex justify-center items-center gap-2 mt-2 md:ml-auto w-20 h-10">
                 <button
                   disabled={videoId === 1}
                   onClick={() => handleChange(0)}
                   className={`${
-                    videoId === 2
-                      ? "bg-color-bgDark text-white"
-                      : "bg-white text-color-bgDark"
-                  } hexagon-v transition-all duration-300 ease-out  font-Gustavo font-bold`}
+                    videoId === 2 ? " text-white" : "bg-white text-color-bgDark"
+                  } hexagon-v transition-colors duration-300 font-Gustavo font-bold`}
                 >
                   1
                 </button>
@@ -115,10 +113,8 @@ const ShowcaseProject = ({
                   disabled={videoId === 2}
                   onClick={() => handleChange(1)}
                   className={`${
-                    videoId === 1
-                      ? "bg-color-bgDark text-white"
-                      : "bg-white text-color-bgDark"
-                  } hexagon-v transition-all duration-300 ease-out font-Gustavo font-bold`}
+                    videoId === 1 ? " text-white" : "bg-white text-color-bgDark"
+                  } hexagon-v transition-colors duration-300 font-Gustavo font-bold`}
                 >
                   2
                 </button>
@@ -157,7 +153,7 @@ const ShowcaseProject = ({
           </div>
 
           <Parallax speed={3} className="md:w-3/5 wh-full">
-            <div className="wh-full relative">
+            <div className="w-full md:h-[22rem] h-48 relative">
               <div className="octagon skill-card-bg2 p-[0.05rem] opacity-75">
                 <div className="octagon overflow-hidden">
                   <video
@@ -177,22 +173,22 @@ const ShowcaseProject = ({
               <div
                 id={`videoShow${_id}`}
                 className="absolute bottom-0 left-0 right-0 wh-full bg-color-bgDark"
-              ></div>
+              />
+            </div>
+            <div className="md:mt-16 mt-4">
+              <div className="m-auto w-fit flex flex-col group relative">
+                <a
+                  className="octagon py-2 max-w-fit text-lg inline-flex items-center text-color-primary hover:cursor-pointer"
+                  href={link}
+                  target="_blank"
+                >
+                  <span className="me-4">Visit website</span>{" "}
+                  <FaArrowUpRightFromSquare />
+                </a>
+                <span className="w-0 absolute bottom-0 h-[.15rem] bg-color-primary rounded-full group-hover:w-full group-hover:right-0 transition-all duration-300" />
+              </div>
             </div>
           </Parallax>
-        </div>
-        <div className="md:mt-16 mt-4">
-          <div className="md:m-auto w-fit flex flex-col group relative">
-            <a
-              className="octagon py-2 max-w-fit text-lg inline-flex items-center text-color-primary hover:cursor-pointer"
-              href={link}
-              target="_blank"
-            >
-              <span className="me-4">Visit website</span>{" "}
-              <FaArrowUpRightFromSquare />
-            </a>
-            <span className="w-0 absolute bottom-0 h-[.15rem] bg-color-primary rounded-full group-hover:w-full group-hover:right-0 transition-all duration-300" />
-          </div>
         </div>
       </div>
     </div>

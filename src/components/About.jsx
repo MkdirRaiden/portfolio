@@ -52,14 +52,14 @@ const About = () => {
         <div className="flex max-sm:flex-col-reverse justify-around items-center">
           <div className=" md:w-2/3 w-full">
             <div id="title-show">
-              <h2 className="md:text-[2.5rem] md:-translate-y-2 text-3xl font-bold">
+              <h2 className="md:text-[2.5rem] md:-translate-y-2 translate-y-2 text-3xl font-bold">
                 👋🏻 Hi I'm{" "}
               </h2>
-              <h1 className="md:text-[3.25rem] text-3xl font-Gustavo font-extrabold mb-4">
+              <h1 className="md:text-[3.25rem] text-3xl font-Gustavo font-extrabold md:mb-4 mb-2">
                 MUKTADIR AHMED
               </h1>
             </div>
-            <h2 className="md:text-4xl text-xl font font-semibold mb-4">
+            <h2 className="md:text-4xl text-xl font font-semibold md:mb-8 mb-6">
               <span className="me-2">I'm a</span>
               <span className="text-color-primary">
                 <Typewriter
@@ -78,7 +78,7 @@ const About = () => {
                 />
               </span>
             </h2>
-            <p className="text-color-tertiary md:w-2/3 w-full mb-8">
+            <p className="text-color-tertiary md:w-2/3 w-full md:mb-10 mb-8">
               I'm a self-taught web developer. I want to get associated with an
               organization that provides a growth-oriented environment and scope
               to learn new skills. I am confident in delivering relevant output
