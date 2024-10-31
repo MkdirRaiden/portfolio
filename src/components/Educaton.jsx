@@ -52,7 +52,7 @@ const Educaton = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="">{item.name}</h3>
+                  <h3 className="max-sm:text-sm">{item.name}</h3>
                   <h4 className="">{item.address}</h4>
                 </div>
               </div>
