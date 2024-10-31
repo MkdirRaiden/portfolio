@@ -80,6 +80,8 @@ const ShowcaseProject = ({
     setVideo((pre) => ({ ...pre, videoId: param + 1 }));
   };
 
+  const button = () => {};
+
   return (
     <div className="md:py-20 py-10 min-h-[110vh]">
       <div>
@@ -104,8 +106,8 @@ const ShowcaseProject = ({
                   disabled={videoId === 1}
                   onClick={() => handleChange(0)}
                   className={`${
-                    videoId === 2 ? " text-white" : "bg-white text-color-bgDark"
-                  } hexagon-v transition-colors duration-300 font-Gustavo font-bold`}
+                    videoId === 1 ? "text-color-bgDark bg-white" : ""
+                  } hexagon-v font-Gustavo font-bold`}
                 >
                   1
                 </button>
@@ -113,8 +115,8 @@ const ShowcaseProject = ({
                   disabled={videoId === 2}
                   onClick={() => handleChange(1)}
                   className={`${
-                    videoId === 1 ? " text-white" : "bg-white text-color-bgDark"
-                  } hexagon-v transition-colors duration-300 font-Gustavo font-bold`}
+                    videoId === 2 ? "text-color-bgDark bg-white" : ""
+                  } hexagon-v font-Gustavo font-bold`}
                 >
                   2
                 </button>

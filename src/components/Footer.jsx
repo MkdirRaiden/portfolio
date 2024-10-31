@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaWhatsapp,
   FaRegCopyright,
+  FaGithub,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -31,9 +32,9 @@ const Footer = () => {
     },
     {
       _id: 3,
-      name: "Whatsapp",
-      icon: <FaWhatsapp />,
-      link: "https://www.facebook.com/muktadir.ahmed.315",
+      name: "Github",
+      icon: <FaGithub />,
+      link: "https://github.com/MkdirRaiden",
     },
   ];
   return (

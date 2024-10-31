@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { navLinkItems } from "../constants";
 import MenuSvg from "./svgs/MenuSvg";
+import { FaDownload } from "react-icons/fa6";
 import Button from "./sub/Button";
 import { heroNavImg, newLogoImg } from "../utils";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { enablePageScroll, disablePageScroll } from "scroll-lock";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
@@ -66,6 +69,26 @@ const Header = () => {
       },
     });
   }, []);
+
+  const downloadPdf = async () => {
+    try {
+      const response = await axios.get("Muktadir.pdf", {
+        responseType: "blob",
+      });
+      const pdfBlob = new Blob([response.data], { type: "application/pdf" });
+      const pdfUrl = window.URL.createObjectURL(pdfBlob);
+      const tempLink = document.createElement("a");
+      tempLink.href = pdfUrl;
+      tempLink.setAttribute("download", "Muktadir-resume.pdf");
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+      window.URL.revokeObjectURL(pdfUrl);
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <header className="fixed left-0 top-0 right-0 w-full z-10">
       <div
@@ -79,11 +102,11 @@ const Header = () => {
           href="/"
         >
           <img
-            className="rounded-full"
+            className="rounded-full scale-[.85]"
             src={newLogoImg}
             alt="logo"
-            width={100}
-            height={100}
+            width={75}
+            height={75}
           />
         </a>
         <nav
@@ -102,34 +125,41 @@ const Header = () => {
             <div className="w-full h-full absolute opacity-40 max-sm:bg-black"></div>
           </div>
           <div className="wh-full flex justify-center items-center  md:gap-10 gap-8 max-md:flex-col max-sm:absolute">
-            {navLinkItems.map((item, ndx) => (
-              <Button
-                onClick={() => {
-                  setOpenNavigation(false);
-                  enablePageScroll();
-                }}
-                className={`navLink translate-y-8 opacity-0 text-center md:text-xs text-4xl cursor-pointer text-color-tertiary hover:text-white duration-150 ${
-                  item.mobileOnly ? "md:hidden" : ""
-                }`}
-                href={item.path}
-                key={ndx}
-                activeClass={"active"}
-              >
-                {item.name.toUpperCase()}
-              </Button>
-            ))}
+            {navLinkItems.map((item, ndx) =>
+              item.path ? (
+                <Button
+                  onClick={() => {
+                    setOpenNavigation(false);
+                    enablePageScroll();
+                  }}
+                  className={`navLink translate-y-8 opacity-0 text-center md:text-xs text-3xl cursor-pointer text-color-tertiary hover:text-white duration-150 ${
+                    item.mobileOnly ? "md:hidden" : ""
+                  }`}
+                  href={item.path}
+                  key={ndx}
+                  activeClass={"active"}
+                >
+                  {item.path.toUpperCase()}
+                </Button>
+              ) : (
+                <button onClick={downloadPdf} key={ndx}>
+                  <div className="flex gap-2 items-center md:hidden border border-gray-600 py-2 px-4 rounded-md bg-color-primary hover:opacity-75 cursor-pointer">
+                    <FaDownload />
+                    <span>{item.name}</span>
+                  </div>
+                </button>
+              )
+            )}
           </div>
         </nav>
-        <Button
+        <button
           className={
-            "hover:rounded-full text-color-primary right-button translate-y-4 opacity-0 md:inline-flex hidden hover:underline text-lg"
+            "text-color-primary hover:text-gray-400 right-button translate-y-4 opacity-0 md:inline-flex hidden text-xl transition-all duration-150"
           }
-          onClick={() =>
-            window.open("https://github.com/MkdirRaiden", "_blank")
-          }
+          onClick={downloadPdf}
         >
-          Github
-        </Button>
+          <FaDownload />
+        </button>
         <button
           onClick={handleMenu}
           className="right-button translate-y-4 opacity-0 flex items-center justify-center ml-auto sm:hidden cursor-pointer max-sm:scale-[1.15] p-2 hexagon-t"

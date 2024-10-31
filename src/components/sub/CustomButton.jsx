@@ -10,6 +10,7 @@ const CustomButton = ({ text, width, height, to, activeClass, href }) => {
       // console.log(`entered on path ${i}`);
       paths[i].style.strokeDashoffset = "-331%";
       paths[i].style.transitionDuration = ".75s";
+      paths[i].style.transitionDelay = ".15s";
     };
     const handleMouseLeave = (i) => {
       // console.log(`left path ${i}`);
@@ -61,7 +62,7 @@ const CustomButton = ({ text, width, height, to, activeClass, href }) => {
       </span>
       <div className="relative w-[10%] h-[50%] flex justify-center items-center overflow-hidden z-[1] ">
         <span
-          className="absolute group-hover:-translate-x-0 opacity-0 transition-all duration-550 -z-[1] ease-linear -translate-x-[150%] group-hover:opacity-100"
+          className="absolute group-hover:-translate-x-0 opacity-0 transition-all duration-550 -z-[1] ease-linear -translate-x-[150%] group-hover:opacity-100 delay-100"
           id="first"
         >
           <svg

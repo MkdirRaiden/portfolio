@@ -65,10 +65,10 @@ export const navLinkItems = [
   },
   {
     _id: 5,
-    name: "Github",
-    path: "https://github.com/MkdirRaiden",
+    name: "Resume",
     mobileOnly: true,
     type: "button",
+    path: null,
   },
 ];
 

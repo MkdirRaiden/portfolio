@@ -13,6 +13,7 @@ const Skills = () => {
             <img src={asteroidImg} alt="asteroid image" />
           </div>
         </Parallax>
+        <div className="absolute left-0 top-0 wh-full bg-black opacity-50" />
         <div className="common-padding">
           <div className=" flex max-sm:flex-col md:gap-10 gap-2">
             {Array.from("123").map((_, ndx) => (
