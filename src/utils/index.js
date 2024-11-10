@@ -33,6 +33,7 @@ import gsapLogo from "/images/frontend/gsap.png";
 import threeLogo from "/images/frontend/three.png";
 
 import nodeLogo from "/images/backened/node.png";
+import cLogo from "/images/backened/cLogo.png";
 import expressLogo from "/images/backened/express.png";
 import phpLogo from "/images/backened/php.png";
 import mongodbLogo from "/images/backened/mongodb.png";
@@ -52,6 +53,7 @@ import problemLogo from "/images/others/problem.png";
 import communicationLogo from "/images/others/communication.png";
 
 export {
+  cLogo,
   lcLogo,
   gtLogo,
   tuLogo,

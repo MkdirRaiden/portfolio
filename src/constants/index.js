@@ -35,6 +35,7 @@ import {
   wgcLogo,
   tuLogo,
   lcLogo,
+  cLogo,
 } from "../utils";
 
 export const navLinkItems = [
@@ -150,8 +151,8 @@ export const backenedSkills = [
   },
   {
     _id: 4,
-    name: "Laravel",
-    icon: laravelLogo,
+    name: "C",
+    icon: cLogo,
   },
   {
     _id: 5,
@@ -166,8 +167,8 @@ export const backenedSkills = [
   },
   {
     _id: 7,
-    name: "Claudinary",
-    icon: claudinaryLogo,
+    name: "Laravel",
+    icon: laravelLogo,
   },
 
   {
