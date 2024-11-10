@@ -18,6 +18,7 @@ const Hero = () => {
           <video
             className="md:block hidden"
             autoPlay
+            muted
             playsInline={true}
             preload="auto"
           >

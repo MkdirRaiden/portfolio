@@ -1,8 +1,9 @@
 import { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { BakeShadows, Environment } from "@react-three/drei";
+import { BakeShadows, Environment, Html } from "@react-three/drei";
 import FallingSpaceManModel from "./Model3D/FallingSpaceManModel";
 import { useGSAP } from "@gsap/react";
+import Fallback from "./sub/Fallback";
 
 const FloatingAstranaut = () => {
   const modelRef = useRef(null);
@@ -42,7 +43,13 @@ const FloatingAstranaut = () => {
           penumbra={2}
           castShadow
         />
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <Html>
+              <Fallback />
+            </Html>
+          }
+        >
           <FallingSpaceManModel
             ref={group}
             limit={50}
