@@ -36,6 +36,7 @@ import {
   tuLogo,
   lcLogo,
   cLogo,
+  ibmLogo
 } from "../utils";
 
 export const navLinkItems = [
@@ -230,12 +231,12 @@ export const otherSkills = [
 export const showcaseProjects = [
   {
     _id: 0,
-    subtitle1: "BACKENED",
+    subtitle1: "BACKEND",
     subtitle2: "DEVELOPMENT",
     title1: "FULLSTACK",
     title2: "TWITTER CLONE",
     pText:
-      "A Twitter replica constructed using MEARN Tech-stack. Tanstack query for data retrieval and cache on the client side. Claudinary API is used to store images on the backend. I learned more about full-stack development while building it.",
+      "A Twitter replica constructed using MERN Tech-stack. Tanstack query for data retrieval and cache on the client side. Claudinary API is used to store images on the backend. I learned more about full-stack development while building it.",
     btnText: "Source code",
     btnUrl: "https://github.com/MkdirRaiden/twitter-clone.git",
     link: "https://twitter-clone-b6ie.onrender.com",
@@ -308,8 +309,20 @@ export const experienceEducation = [
     type: "experience",
     date: "2023-2024",
   },
-  {
+   {
     _id: 1,
+    name: "Fundamentals of web development",
+    icon: ibmLogo,
+    address: "IBM SkillsBuild",
+    desc: `Completed web development fundamentals from IBM skillsBuild free online course and earned a credential badge. Badge link <a
+                href="https://www.credly.com/badges/bfe91ce2-4dc9-4260-9b5d-72ce4f7ee345/public_url"
+                >https://www.credly.com/badges/bfe91ce2-4dc9-4260-9b5d-72ce4f7ee345/public_url</a
+              >`,
+    type: "education",
+    date: "2025",
+  },
+  {
+    _id: 2,
     name: "Javascript",
     icon: lcLogo,
     address: "Online Course",
@@ -318,16 +331,16 @@ export const experienceEducation = [
     date: "2024",
   },
   {
-    _id: 2,
+    _id: 3,
     name: "Tezpur University",
     icon: tuLogo,
     address: "Tezpur, Assam",
     desc: "Studied Bachelor of Technology in Computer Science & Engineering at Tezpur University.",
     type: "education",
-    date: "2017-2022",
+    date: "2017-2019",
   },
   {
-    _id: 3,
+    _id: 4,
     name: "West Goalpara College",
     icon: wgcLogo,
     address: "Goalpara, Assam",
