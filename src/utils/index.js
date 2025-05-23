@@ -11,6 +11,7 @@ import gtLogo from "/images/experience/gtLogo.png";
 import tuLogo from "/images/experience/tuLogo.png";
 import wgcLogo from "/images/experience/wgcLogo.png";
 import lcLogo from "/images/experience/leetcode.png";
+import ibmLogo from "/images/experience/ibmLogo.png";
 
 import heroNavImg from "/images/heroNav.jpg";
 import heroMoonBgImg from "/images/heroBgMoon.jpg";
