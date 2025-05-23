@@ -314,12 +314,10 @@ export const experienceEducation = [
     name: "Fundamentals of web development",
     icon: ibmLogo,
     address: "IBM SkillsBuild",
-    desc: `Completed web development fundamentals from IBM skillsBuild free online course and earned a credential badge. Badge link <a
-                href="https://www.credly.com/badges/bfe91ce2-4dc9-4260-9b5d-72ce4f7ee345/public_url"
-                >https://www.credly.com/badges/bfe91ce2-4dc9-4260-9b5d-72ce4f7ee345/public_url</a
-              >`,
+    desc: `Completed web development fundamentals from IBM skillsBuild free online course and earned a credential badge. Badge link provided below.`,
     type: "education",
     date: "2025",
+    link: "https://www.credly.com/badges/bfe91ce2-4dc9-4260-9b5d-72ce4f7ee345/public_url"
   },
   {
     _id: 2,

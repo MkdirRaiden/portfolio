@@ -70,7 +70,9 @@ const Header = () => {
     });
   }, []);
 
+  const [isDownloading, setIsDownloading] = useState(false);
   const downloadPdf = async () => {
+    setIsDownloading(true);
     try {
       const response = await axios.get("Muktadir.pdf", {
         responseType: "blob",
@@ -86,6 +88,8 @@ const Header = () => {
       window.URL.revokeObjectURL(pdfUrl);
     } catch (error) {
       toast.error(error.message);
+    } finally{
+      setIsDownloading(false);
     }
   };
 
@@ -142,7 +146,7 @@ const Header = () => {
                   {item.path.toUpperCase()}
                 </Button>
               ) : (
-                <button onClick={downloadPdf} key={ndx}>
+                <button title="download resume" onClick={downloadPdf} key={ndx}>
                   <div className="flex gap-2 items-center md:hidden border border-gray-600 py-2 px-4 rounded-md bg-color-primary hover:opacity-75 cursor-pointer">
                     <FaDownload />
                     <span>{item.name}</span>
@@ -157,8 +161,9 @@ const Header = () => {
             "text-color-primary hover:text-gray-400 right-button translate-y-4 opacity-0 md:inline-flex hidden text-xl transition-all duration-150"
           }
           onClick={downloadPdf}
+          disabled={isDownloading}
         >
-          <FaDownload />
+         {isDownloading ? <span className="text-sm text-color-primary">Loading...</span> : <FaDownload />} 
         </button>
         <button
           onClick={handleMenu}

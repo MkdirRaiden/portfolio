@@ -54,6 +54,7 @@ import problemLogo from "/images/others/problem.png";
 import communicationLogo from "/images/others/communication.png";
 
 export {
+  ibmLogo,
   cLogo,
   lcLogo,
   gtLogo,

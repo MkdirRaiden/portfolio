@@ -57,6 +57,7 @@ const Educaton = () => {
                 </div>
               </div>
               <p className="opacity-50 text-sm font-extralight">{item.desc}</p>
+              {item.link && <a target="_blanck" className="text-blue-400 text-sm hover:opacity-70" href={item.link}>{item.link}</a>}
             </VerticalTimelineElement>
           ))}
           <VerticalTimelineElement
