@@ -278,7 +278,7 @@ export const moreProjects = [
     name: "React redux and RTK",
     description:
       "A React react powered app, integrated with react-redux, RTK toolkit for global state management.",
-    image: project2Img,
+    image: project1Img,
     link: "https://mkdirraiden.github.io/e-plant-shopping/",
   },
   {
@@ -294,7 +294,7 @@ export const moreProjects = [
     name: "React frontend design",
     description:
       "A React tailwind website that I've built from scratch to gain a grasp of how React works.",
-    image: project1Img,
+    image: project2Img,
     link: "https://mkdirraiden.github.io/React-project02/",
   },
 ];
