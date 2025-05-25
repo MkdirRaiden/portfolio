@@ -275,11 +275,11 @@ export const showcaseProjects = [
 export const moreProjects = [
   {
     _id: 0,
-    name: "React tailwind webpage",
+    name: "React redux and RTK",
     description:
-      "A React tailwind website that I've built from scratch to gain a grasp of how React works.",
+      "A React react powered app, integrated with react-redux, RTK toolkit for global state management.",
     image: project2Img,
-    link: "https://mkdirraiden.github.io/react-tailwind-app/",
+    link: "https://mkdirraiden.github.io/e-plant-shopping/",
   },
   {
     _id: 1,
@@ -309,7 +309,7 @@ export const experienceEducation = [
     type: "experience",
     date: "2023-2024",
   },
-   {
+  {
     _id: 1,
     name: "Fundamentals of web development",
     icon: ibmLogo,
