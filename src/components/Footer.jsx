@@ -75,7 +75,7 @@ const Footer = () => {
       <div className="border-t border-gray-800 flex items-center justify-center py-6">
         <div className="flex items-center opacity-75 text-sm">
           <FaRegCopyright />{" "}
-          <span>2024 Muktadir Ahmed. All rights reserved</span>
+          <span>2025 Muktadir Ahmed. All rights reserved</span>
         </div>
       </div>
     </>

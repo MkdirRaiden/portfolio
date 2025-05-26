@@ -31,11 +31,9 @@ const SkillCard = ({ arr, title, bg, ndx }) => {
           : "translate-x-10"
       } opacity-0 h-[22rem]`}
     >
-      <div className={`octagon ${bg} p-[0.25rem] relative`}>
-        <div className="flex flex-wrap bg-color-bgDark octagon py-14 space-x-2 space-y-2">
-          <div
-            className={`absolute top-0 left-[50%] -translate-x-[50%] p-2 text-color-tertiary`}
-          >
+      <div className={`octagon ${bg} p-[0.15rem] relative`}>
+        <div className="flex flex-wrap bg-black-100 octagon py-14 space-x-2 space-y-2">
+          <div className={`absolute top-0 left-[50%] -translate-x-[50%] p-2`}>
             {title}
           </div>
 

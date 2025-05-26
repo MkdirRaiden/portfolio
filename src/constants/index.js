@@ -1,6 +1,9 @@
 import {
+  cLogo,
+  jsLogo,
+  phpLogo,
+  sqlLogo,
   bootstrapLogo,
-  claudinaryLogo,
   communicationLogo,
   cssLogo,
   datastructureLogo,
@@ -9,12 +12,10 @@ import {
   gsapLogo,
   htmlLogo,
   jqueryLogo,
-  jsLogo,
   laravelLogo,
   mongodbLogo,
   mysqlLogo,
   nodeLogo,
-  phpLogo,
   postmanLogo,
   problemLogo,
   reactLogo,
@@ -35,7 +36,6 @@ import {
   wgcLogo,
   tuLogo,
   lcLogo,
-  cLogo,
   ibmLogo
 } from "../utils";
 
@@ -72,6 +72,13 @@ export const navLinkItems = [
     type: "button",
     path: null,
   },
+];
+
+export const services = [
+  { title: "C", icon: cLogo },
+  { title: "JavaScript", icon: jsLogo },
+  { title: "PHP", icon: phpLogo },
+  { title: "SQL", icon: sqlLogo },
 ];
 
 export const frontendSkills = [
@@ -275,27 +282,31 @@ export const showcaseProjects = [
 export const moreProjects = [
   {
     _id: 0,
-    name: "React redux and RTK",
+    name: "E-Plant Shopping Cart",
     description:
       "A React powered frontend app, integrated with react-redux, RTK toolkit for global state management.",
     image: project1Img,
+    tech: ['#React', '#RTK', '#HTML', '#CSS'],
     link: "https://mkdirraiden.github.io/e-plant-shopping/",
+  },
+
+  {
+    _id: 2,
+    name: "React Webpage",
+    description:
+      "A React tailwind powered frontend app that I've built from scratch to gain a grasp of how React works.",
+    image: project2Img,
+    tech: ['#React', '#HTML', '#CSS', '#Gsap', '#TailwindCss'],
+    link: "https://mkdirraiden.github.io/React-project02/",
   },
   {
     _id: 1,
-    name: "PHP mysql website",
+    name: "PHP Website",
     description:
-      "A simple portfolio website built using PHP, Bootstrap, jQuery, mysql, html and css.",
+      "A simple portfolio website built using PHP, Bootstrap, jQuery, mysql, html and css for performing CRUD operation.",
     image: project3Img,
+    tech: ['#PHP', '#mySql', '#jQuery', '#HTML', '#CSS'],
     link: "http://myphpecommerce.infinityfreeapp.com/",
-  },
-  {
-    _id: 2,
-    name: "React frontend design",
-    description:
-      "A React tailwind frontend app that I've built from scratch to gain a grasp of how React works.",
-    image: project2Img,
-    link: "https://mkdirraiden.github.io/React-project02/",
   },
 ];
 
@@ -305,7 +316,7 @@ export const experienceEducation = [
     name: "Geekworkx Technology",
     address: "Guwahati, Assam",
     icon: gtLogo,
-    desc: "Worked as an application developer for about half a year building dynamic website. Learned jQuery, PHP and mysql along the process",
+    desc: ["Worked as and application developer for about half a year working on real world projects.", "Gained hand on experience with PHP, mySql, jQuery, HTML and CSS."],
     type: "experience",
     date: "2023-2024",
   },
@@ -314,17 +325,16 @@ export const experienceEducation = [
     name: "Fundamentals of web development",
     icon: ibmLogo,
     address: "IBM SkillsBuild",
-    desc: `Completed web development fundamentals from IBM skillsBuild free online course and earned a credential badge. Badge link provided below.`,
+    desc: ["Took a web development fundamental course and learned software development.", "Got familiarity with SDLC, agile development and Cloud computing.", "https://www.credly.com/badges/bfe91ce2-4dc9-4260-9b5d-72ce4f7ee345/public_url"],
     type: "education",
-    date: "2025",
-    link: "https://www.credly.com/badges/bfe91ce2-4dc9-4260-9b5d-72ce4f7ee345/public_url"
+    date: "2025"
   },
   {
     _id: 2,
     name: "Javascript",
     icon: lcLogo,
     address: "Online Course",
-    desc: "Has solved the 30 days javascript challenge on leetcode. It broadened my knowledge in javascript.",
+    desc: ["Has solved the 30 days javascript challenge on leetcode. It broadened my knowledge in javascript and data structures."],
     type: "education",
     date: "2024",
   },
@@ -333,7 +343,7 @@ export const experienceEducation = [
     name: "Tezpur University",
     icon: tuLogo,
     address: "Tezpur, Assam",
-    desc: "Studied Bachelor of Technology in Computer Science & Engineering at Tezpur University.",
+    desc: ["Studied Bachelor of Technology in Computer Science & Engineering at Tezpur University.", "CGPA - 6.13, 25 credits completed."],
     type: "education",
     date: "2017-2019",
   },
@@ -342,7 +352,7 @@ export const experienceEducation = [
     name: "West Goalpara College",
     icon: wgcLogo,
     address: "Goalpara, Assam",
-    desc: "Studied H.S. Science stream at West Goalpara College scoring over 86 percentage.",
+    desc: ["Studied H.S. Science stream at West Goalpara College.", "Scored over 86% on board exam and secured letter marks on all six subjects."],
     type: "education",
     date: "2013-2015",
   },

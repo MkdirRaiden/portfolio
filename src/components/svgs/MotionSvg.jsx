@@ -55,7 +55,7 @@ const MotionSvg = () => {
           id="motionPath"
           d="M0 36 H410 L500 109 H843 L930 36 H1340"
           stroke="#a1bbff"
-          strokeWidth="2.5"
+          strokeWidth="1"
           fill="none"
           style={{
             strokeOpacity: 0.5,
@@ -67,7 +67,7 @@ const MotionSvg = () => {
           id="circle0"
           cx={0}
           cy={36}
-          r={5}
+          r={3}
           fill="white"
           style={{ visibility: "hidden" }}
         />
@@ -75,7 +75,7 @@ const MotionSvg = () => {
           id="circle1"
           cx={410}
           cy={36}
-          r={5}
+          r={3}
           fill="white"
           style={{ visibility: "hidden" }}
         />
@@ -83,7 +83,7 @@ const MotionSvg = () => {
           id="circle2"
           cx={500}
           cy={109}
-          r={5}
+          r={3}
           fill="white"
           style={{ visibility: "hidden" }}
         />
@@ -91,7 +91,7 @@ const MotionSvg = () => {
           id="circle3"
           cx={843}
           cy={109}
-          r={5}
+          r={3}
           fill="white"
           style={{ visibility: "hidden" }}
         />
@@ -99,7 +99,7 @@ const MotionSvg = () => {
           id="circle4"
           cx={930}
           cy={36}
-          r={5}
+          r={3}
           fill="white"
           style={{ visibility: "hidden" }}
         />
@@ -107,7 +107,7 @@ const MotionSvg = () => {
           id="circle5"
           cx={1350}
           cy={36}
-          r={5}
+          r={3}
           fill="white"
           style={{ visibility: "hidden" }}
         />

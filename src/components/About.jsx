@@ -1,115 +1,74 @@
-import { aboutImg, heroMoonBgImg } from "../utils";
-import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+import { Tilt } from "react-tilt";
+import { services } from "../constants";
+import { SectionWrapper } from "./hoc";
+import { styles } from "../styles";
+import { fadeIn, textVariant } from "../utils/motion";
 import CustomButton from "./sub/CustomButton";
-import MotionSvg from "./svgs/MotionSvg";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+
+const ServiceCard = ({ index, title, icon }) => (
+  <Tilt className="md:w-1/5 w-full">
+    <motion.div
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      className="w-full green-pink-gradient p-[1px] rounded-[20px]"
+    >
+      <div
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+      >
+        <img
+          src={icon}
+          alt="web-development"
+          className="w-16 h-16 object-contain"
+          loading="lazy"
+        />
+
+        <h3 className="text-white text-[20px] font-bold text-center">
+          {title}
+        </h3>
+      </div>
+    </motion.div>
+  </Tilt>
+);
 
 const About = () => {
-  useGSAP(() => {
-    gsap.from("#title-show", {
-      y: 10,
-      duration: 0.5,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: `#title-show`,
-        toggleActions: "restart none none none",
-      },
-    });
-
-    gsap.to("#title-image-show", {
-      height: "0%",
-      delay: 0.5,
-      duration: 0.75,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: `#title-image-show`,
-        toggleActions: "restart none none none",
-      },
-    });
-
-    gsap.to("#button-show", {
-      display: "block",
-      delay: 0.5,
-      duration: 0.75,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: `#button-show`,
-        toggleActions: "restart none none none",
-      },
-    });
-  }, []);
-
   return (
-    <section
-      id="about"
-      className="md:min-h-[100vh] min-h-[140vh] relative overflow-hidden border-t-2 border-gray-900"
-    >
-      <div className="w-full md:block hidden h-36 z-[2] absolute -bottom-6 left-[50%] -translate-x-[50%]">
-        <MotionSvg />
-      </div>{" "}
-      <div className="wh-full common-padding absolute">
-        <div className="flex max-sm:flex-col-reverse justify-around items-center">
-          <div className=" md:w-2/3 w-full">
-            <div id="title-show">
-              <h2 className="md:text-[2.5rem] md:-translate-y-2 translate-y-2 text-3xl font-bold">
-                👋🏻 Hi I'm{" "}
-              </h2>
-              <h1 className="md:text-[3.25rem] text-3xl font-Gustavo font-extrabold md:mb-4 mb-2">
-                MUKTADIR AHMED
-              </h1>
-            </div>
-            <h2 className="md:text-4xl text-xl font font-semibold md:mb-8 mb-6">
-              <span className="me-2">I'm a</span>
-              <span className="text-color-primary">
-                <Typewriter
-                  words={[
-                    "WEB DEVELOPER",
-                    "REACT DEVELOPER",
-                    "MEARN DEVELOPER",
-                    "FULLSTACK DEVELOPER",
-                  ]}
-                  loop={false}
-                  cursor
-                  cursorStyle="_"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </span>
-            </h2>
-            <p className="text-color-tertiary md:w-2/3 w-full md:mb-10 mb-8">
-              I'm a self-taught web developer. I want to get associated with an
-              organization that provides a growth-oriented environment and scope
-              to learn new skills. I am confident in delivering relevant output
-              through my work which would impact the overall organizational
-              growth.
-            </p>
-            <div className="h-[80px]">
-              <div id="button-show" className="hidden">
-                <CustomButton
-                  width={200}
-                  height={60}
-                  text={"Get in touch"}
-                  to={"contact"}
-                  activeClass={"active"}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/3 w-full shadow-md overflow-hidden max-sm:mb-5 relative">
-            <div className="hexagon-v w-72 h-72">
-              <img src={aboutImg} alt="avatar" />
-              <div
-                id="title-image-show"
-                className="bg-black absolute wh-full bottom-0 left-0 border border-gray-950"
-              />
-            </div>
-          </div>
-        </div>
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>About</h2>
+      </motion.div>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+      >
+        I am a self-taught software developer and multilingual speaker with a
+        passion for programming, web development, and software development. I am
+        looking to join a company that values innovation, collaboration, and
+        continuous learning and am confident that my enthusiasm and drive will
+        help me succeed in any role that leverages my passion for technology.
+      </motion.p>
+      <div className="mt-10 ">
+        <CustomButton
+          text={"Get in touch"}
+          to={"contact"}
+          width={200}
+          height={60}
+        />
       </div>
-    </section>
+      <div className="mt-28 flex flex-wrap gap-10 justify-center">
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
+    </>
   );
 };
 
-export default About;
+const WrappedAbout = SectionWrapper(About, "about");
+
+export default WrappedAbout;

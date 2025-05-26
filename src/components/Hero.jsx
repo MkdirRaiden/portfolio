@@ -1,36 +1,63 @@
-import { heroMoonBgImg, heroVideoSrc } from "../utils";
-import FloatingAstranaut from "./FloatingAstranaut";
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import ComputersCanvas from "./canvas/Computers";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
-    <section
-      id="overview"
-      className="relative w-full h-[100vh] overflow-hidden"
-    >
-      <div className="wh-full top-0 left-0 absolute">
-        <div className="absolute wh-full top-0 left-0">
-          <div className="absolute top-0 left-0 wh-full bg-black opacity-50" />
-          <img
-            className="md:hidden block absolute left-0 bottom-20 scale-[1.75]"
-            src={heroMoonBgImg}
-            alt="background"
-          />
-          <video
-            className="md:block hidden"
-            autoPlay
-            muted
-            playsInline={true}
-            preload="auto"
-          >
-            <source src={heroVideoSrc} type="video/mp4" />
-          </video>
+    <section className="relative w-full h-screen mx-auto" id="overview">
+      <div
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+      >
+        <div className="flex flex-col justify-center items-center mt-5">
+          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
+          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+        </div>
+
+        <div>
+          <h1 className={`${styles.heroHeadText} text-white`}>
+            Hi, I'm <span className="text-[#915EFF]">Ahmed</span>
+          </h1>
+          <div className={`${styles.heroSubText} mt-2`}>
+            I do
+            <div className="text-orange-300">
+              <Typewriter
+                options={{
+                  strings: [
+                    "FullStack Development",
+                    "MERN Development",
+                    "MEVN Development",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  loopCount: Infinity,
+                  deleteSpeed: "natural",
+                  pauseFor: 1000,
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="relative wh-full z-[5] ">
-        <div className="absolute wh-full top-0 left-0 pointer-events-none common-padding flex justify-center items-center"></div>
-        <div className="wh-full">
-          <FloatingAstranaut />
-        </div>
+
+      <ComputersCanvas />
+
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+        <a href="#about">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            />
+          </div>
+        </a>
       </div>
     </section>
   );

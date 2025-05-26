@@ -88,7 +88,7 @@ const Header = () => {
       window.URL.revokeObjectURL(pdfUrl);
     } catch (error) {
       toast.error(error.message);
-    } finally{
+    } finally {
       setIsDownloading(false);
     }
   };
@@ -97,7 +97,7 @@ const Header = () => {
     <header className="fixed left-0 top-0 right-0 w-full z-10">
       <div
         id="header-bg"
-        className="absolute border-b border-gray-900 bg-color-bgDark w-full h-[0%]"
+        className="absolute bg-primary/90 w-full h-[0%]"
       ></div>
       <div className="relative flex items-center py-4 md:px-32 px-4">
         <a
@@ -116,17 +116,17 @@ const Header = () => {
         <nav
           className={`${
             openNavigation
-              ? "block font-Gustavo font-extrabold"
+              ? "block font-extrabold"
               : "max-md:hidden font-poppins font-light"
           } m-auto max-md:fixed left-0 top-0 max-md:w-full bottom-0 lg:static relative`}
         >
-          <div className="max-sm:absolute max-sm:bg-black w-full h-full md:hidden inline-flex">
+          <div className="max-sm:absolute max-sm:bg-primary w-full h-full md:hidden inline-flex">
             <img
               className="absolute w-full h-full"
               src={heroNavImg}
               alt="background image"
             />
-            <div className="w-full h-full absolute opacity-40 max-sm:bg-black"></div>
+            <div className="w-full h-full absolute opacity-40 max-sm:bg-primary"></div>
           </div>
           <div className="wh-full flex justify-center items-center  md:gap-10 gap-8 max-md:flex-col max-sm:absolute">
             {navLinkItems.map((item, ndx) =>
@@ -136,12 +136,12 @@ const Header = () => {
                     setOpenNavigation(false);
                     enablePageScroll();
                   }}
-                  className={`navLink translate-y-8 opacity-0 text-center md:text-xs text-3xl cursor-pointer text-color-tertiary hover:text-white duration-150 ${
+                  className={`navLink hover:text-gray-400 translate-y-8 text-center md:text-xs text-3xl cursor-pointer duration-150 ${
                     item.mobileOnly ? "md:hidden" : ""
                   }`}
                   href={item.path}
                   key={ndx}
-                  activeClass={"active"}
+                  activeClass={"text-gray-400"}
                 >
                   {item.path.toUpperCase()}
                 </Button>
@@ -158,12 +158,16 @@ const Header = () => {
         </nav>
         <button
           className={
-            "text-color-primary hover:text-gray-400 right-button translate-y-4 opacity-0 md:inline-flex hidden text-xl transition-all duration-150"
+            "text-white hover:text-gray-400 right-button translate-y-4 opacity-0 md:inline-flex hidden text-xl transition-all duration-150"
           }
           onClick={downloadPdf}
           disabled={isDownloading}
         >
-         {isDownloading ? <span className="text-sm text-color-primary">Loading...</span> : <FaDownload />} 
+          {isDownloading ? (
+            <span className="text-sm text-gray-300">Loading...</span>
+          ) : (
+            <FaDownload />
+          )}
         </button>
         <button
           onClick={handleMenu}

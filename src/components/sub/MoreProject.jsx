@@ -19,7 +19,7 @@ const MoreProject = () => {
               width={"100%"}
               height={"100%"}
             />
-            <div className="absolute bottom-0 left-0 py-4 bg-black w-full h-full translate-y-[80%] group-hover:translate-y-0 transition-transform duration-200 ease-linear">
+            <div className="absolute bottom-0 left-0 py-4 bg-primary w-full h-full translate-y-[80%] group-hover:translate-y-0 transition-transform duration-200 ease-linear">
               <div>
                 <h2 className="text-lg mb-2 text-color-secondary">
                   {project.name}
@@ -27,6 +27,13 @@ const MoreProject = () => {
                 <p className="text-color-tertiary text-sm mb-4">
                   {project.description}
                 </p>
+                <div className="flex flex-row flex-wrap gap-2">
+                  {project.tech.map((item) => (
+                    <span className="text-sm text-orange-500" key={item}>
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className="text-xl rounded-full w-fit p-1  flex items-center text-blue-600">
                 <span className="text-sm">visit website</span>{" "}

@@ -3,6 +3,7 @@ import { contactBg } from "../utils";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
+import { styles } from "../styles";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -31,18 +32,22 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="border-t-4 min-h-[80vh] text-gray-300 border-white md:px-32 px-4 md:py-20 py-10 relative"
+      className="border-t-4 md:min-h-[120vh] min-h-[110vh] text-gray-300 border-white md:px-32 px-4 md:py-20 py-10 relative"
     >
-      <div className="absolute left-0 top-0 wh-full">
+      {/* <div className="absolute left-0 top-0 wh-full">
         <img className="wh-full" src={contactBg} alt="bg image" />
-      </div>
-      <div className="absolute wh-full left-0 top-0 bg-[#4479fd] opacity-85" />
+      </div> */}
+      {/* <div className="absolute wh-full left-0 top-0 bg-primary opacity-90" /> */}
       <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] md:w-2/5 w-full mx-auto">
         <form
-          className=" bg-blue-600/50 p-8 octagon"
+          className=" bg-black-100 p-8 octagon"
           onSubmit={handleSubmit}
           method="POST"
         >
+          <div className="pb-4">
+            <p className={styles.sectionSubText}>Get in touch</p>
+            <h3 className={styles.sectionHeadText}>Contact Me</h3>
+          </div>
           <div className="flex flex-col gap-1 mb-2">
             <label htmlFor="from_name">Name</label>
             <input

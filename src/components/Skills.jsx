@@ -1,19 +1,26 @@
 import { backenedSkills, frontendSkills, otherSkills } from "../constants";
 import { asteroidImg } from "../utils";
 import SkillCard from "./SkillCard";
+import MotionSvg from "./svgs/MotionSvg";
 import { Parallax } from "react-scroll-parallax";
 
 const Skills = () => {
   return (
     <>
-      <section id="skills" className=" min-h-[85vh] relative overflow-hidden">
-        <Parallax speed={10} className="wh-full absolute top-0 left-0">
+      <section
+        id="skills"
+        className=" min-h-[90vh] relative overflow-hidden pt-20 pb-8"
+      >
+        <div className="w-full md:block hidden h-36 z-[2] absolute top-8 left-[50%] -translate-x-[50%]">
+          <MotionSvg />
+        </div>{" "}
+        <Parallax speed={10} className="wh-full absolute bottom-0 left-0">
           <div className="absolute top-[45%] left-[30%]">
-            <div className="absolute top-0 left-0 wh-full bg-black opacity-60"></div>
             <img src={asteroidImg} alt="asteroid image" />
           </div>
         </Parallax>
-        <div className="absolute left-0 top-0 wh-full bg-black opacity-50" />
+        <div className="absolute bg-primary top-0 left-0 wh-full opacity-90" />
+        <div className="absolute left-0 top-0 wh-full opacity-50" />
         <div className="common-padding">
           <div className=" flex max-sm:flex-col md:gap-10 gap-2">
             {Array.from("123").map((_, ndx) => (

@@ -4,6 +4,7 @@ import gsap from "../../utils/gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef, useState } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { styles } from "../../styles";
 
 const ShowcaseProject = ({
   subTitle1,
@@ -83,7 +84,7 @@ const ShowcaseProject = ({
   const button = () => {};
 
   return (
-    <div className="md:py-20 py-10 min-h-[110vh]">
+    <div className=" min-h-[110vh] pb-16">
       <div>
         <div
           className={`${
@@ -94,7 +95,7 @@ const ShowcaseProject = ({
             <h2
               className={`${
                 _id === 1 || _id === 2 ? "md:text-end" : ""
-              } font-Gustavo md:w-fit w-full`}
+              }  md:w-fit w-full ${styles.sectionSubText}`}
             >
               <span>{subTitle1}</span>
               <br />
@@ -106,7 +107,7 @@ const ShowcaseProject = ({
                   disabled={videoId === 1}
                   onClick={() => handleChange(0)}
                   className={`${
-                    videoId === 1 ? "text-color-bgDark bg-white" : ""
+                    videoId === 1 ? "text-black-200 bg-white" : ""
                   } hexagon-v font-Gustavo font-bold`}
                 >
                   1
@@ -115,7 +116,7 @@ const ShowcaseProject = ({
                   disabled={videoId === 2}
                   onClick={() => handleChange(1)}
                   className={`${
-                    videoId === 2 ? "text-color-bgDark bg-white" : ""
+                    videoId === 2 ? "text-black-200 bg-white" : ""
                   } hexagon-v font-Gustavo font-bold`}
                 >
                   2
@@ -125,10 +126,14 @@ const ShowcaseProject = ({
           </div>
           <div
             id={`titleShow${_id}`}
-            className="font-Gustavo md:text-[62px] text-3xl font-semibold md:w-3/5 w-full md:translate-y-4 opacity-0"
+            className=" md:text-[62px] text-3xl font-semibold md:w-3/5 w-full md:translate-y-4 opacity-0"
           >
-            <div>{title1}</div>
-            <div className="text-end md:translate-y-5">{title2}</div>
+            <div className={styles.sectionHeadText}>{title1}</div>
+            <div
+              className={`text-end md:translate-y-5 ${styles.sectionHeadText}`}
+            >
+              {title2}
+            </div>
           </div>
         </div>
         <div
@@ -143,7 +148,7 @@ const ShowcaseProject = ({
                 : ""
             }`}
           >
-            <p className=" text-color-tertiary max-sm:mt-12 md:w-3/5 w-full mb-10">
+            <p className=" text-gray-200 max-sm:mt-12 md:w-3/5 w-full mb-10">
               {pText}
             </p>
             <CustomButton
@@ -174,20 +179,20 @@ const ShowcaseProject = ({
               </div>
               <div
                 id={`videoShow${_id}`}
-                className="absolute bottom-0 left-0 right-0 wh-full bg-color-bgDark"
+                className="absolute bottom-0 left-0 right-0 wh-full bg-primary"
               />
             </div>
             <div className="md:mt-16 mt-4">
               <div className="m-auto w-fit flex flex-col group relative">
                 <a
-                  className="octagon py-2 max-w-fit text-lg inline-flex items-center text-color-primary hover:cursor-pointer"
+                  className="octagon py-2 max-w-fit text-lg inline-flex items-center text-blue-600 hover:cursor-pointer"
                   href={link}
                   target="_blank"
                 >
                   <span className="me-4">Visit website</span>{" "}
                   <FaArrowUpRightFromSquare />
                 </a>
-                <span className="w-0 absolute bottom-0 h-[.15rem] bg-color-primary rounded-full group-hover:w-full group-hover:right-0 transition-all duration-300" />
+                <span className="w-0 absolute bottom-0 h-[.15rem] bg-blue-600 rounded-full group-hover:w-full group-hover:right-0 transition-all duration-300" />
               </div>
             </div>
           </Parallax>

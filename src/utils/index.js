@@ -14,12 +14,13 @@ import lcLogo from "/images/experience/leetcode.png";
 import ibmLogo from "/images/experience/ibmLogo.png";
 
 import heroNavImg from "/images/heroNav.jpg";
-import heroMoonBgImg from "/images/heroBgMoon.jpg";
 import newLogoImg from "/images/newLogo.svg";
+import heroMoonBgImg from "/images/heroBgMoon.jpg";
 import spaceShipImg from "/images/space-ship.png";
 import asteroidImg from "/images/asteroid.png";
 import aboutImg from "/images/aboutImg.png";
 import contactBg from "/images/contactBg.png";
+import sqlLogo from "/images/backened/sql.png";
 
 import htmlLogo from "/images/frontend/html.png";
 import cssLogo from "/images/frontend/css.png";
@@ -54,8 +55,11 @@ import problemLogo from "/images/others/problem.png";
 import communicationLogo from "/images/others/communication.png";
 
 export {
-  ibmLogo,
   cLogo,
+  jsLogo,
+  phpLogo,
+  sqlLogo,
+  ibmLogo,
   lcLogo,
   gtLogo,
   tuLogo,
@@ -77,7 +81,6 @@ export {
   htmlLogo,
   cssLogo,
   reactLogo,
-  jsLogo,
   gsapLogo,
   tanstackLogo,
   tailwindLogo,
@@ -87,7 +90,6 @@ export {
   threeLogo,
   nodeLogo,
   expressLogo,
-  phpLogo,
   mongodbLogo,
   mysqlLogo,
   restfullLogo,

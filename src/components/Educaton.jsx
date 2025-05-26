@@ -7,24 +7,31 @@ import { experienceEducation } from "../constants";
 import { FaGraduationCap } from "react-icons/fa6";
 import { MdOutlineWork } from "react-icons/md";
 import { GoStarFill } from "react-icons/go";
+import { styles } from "../styles";
 
 const Educaton = () => {
   return (
     <section
       id="educations"
-      className="md:px-32 px-4 md:mt-36 mt-20 relative bg-gray-100 min-h-[100vh]"
+      className="md:px-32 px-4 md:mt-36 mt-40 relative bg-gray-100 min-h-[100vh]"
     >
-      <div className="curve md:block hidden bg-black w-[50%] h-24 -top-4 left-[50%] -translate-x-[50%] absolute">
-        <h1 className="text-center md:pt-6 font-Gustavo text-3xl font-bold">
+      <div className="curve md:block hidden bg-primary w-[75%] h-44 -top-4 left-[50%] -translate-x-[50%] absolute">
+        <div className={`${styles.sectionSubText} md:text-center`}>
+          WHAT I HAVE DONE SO FAR
+        </div>
+        <h1 className={`text-center md:pt-6 ${styles.sectionHeadText}`}>
           EXPERIENCE & EDUCATIONS
         </h1>
       </div>
-      <div className="md:hidden block scale-y-105 px-5 bg-black w-full h-[4.85rem] -top-4 left-0 absolute">
-        <h1 className="text-center font-Gustavo text-xl font-semibold">
+      <div className="md:hidden block scale-y-105 px-5 bg-primary w-full h-[4.85rem] -top-40 left-0 absolute">
+        <div className={`${styles.sectionSubText}`}>
+          WHAT I HAVE DONE SO FAR
+        </div>
+        <h1 className={`${styles.sectionHeadText} text-[1.25rem]`}>
           EXPERIENCE & EDUCATIONS
         </h1>
       </div>
-      <div className="md:pt-20 pt-16">
+      <div className="md:pt-40 ">
         <VerticalTimeline lineColor="#ffffff">
           {experienceEducation.map((item) => (
             <VerticalTimelineElement
@@ -52,12 +59,30 @@ const Educaton = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="max-sm:text-sm">{item.name}</h3>
-                  <h4 className="">{item.address}</h4>
+                  <h3 className="font-bold text-blue-600">{item.name}</h3>
+                  <h4 className="text-orange-400">{item.address}</h4>
                 </div>
               </div>
-              <p className="opacity-50 text-sm font-extralight">{item.desc}</p>
-              {item.link && <a target="_blanck" className="text-blue-400 text-sm hover:opacity-70" href={item.link}>{item.link}</a>}
+              <ul
+                className="opacity-50 text-sm py-4"
+                style={{ listStyleType: "circle", marginLeft: "1.25rem" }}
+              >
+                {item.desc.map((item, idx) => {
+                  return idx === 2 ? (
+                    <li key={item}>
+                      <a
+                        target="_blanck"
+                        className="text-blue-600 text-sm hover:opacity-70"
+                        href={item}
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  ) : (
+                    <li key={item}>{item}</li>
+                  );
+                })}
+              </ul>
             </VerticalTimelineElement>
           ))}
           <VerticalTimelineElement

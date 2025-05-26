@@ -4,7 +4,7 @@ const SkillItems = ({ arr }) => {
       {arr.map((skill, ndx) => (
         <div
           key={ndx}
-          className="flex text-gray-300 text-sm justify-center items-center gap-2 bg-color-bgDark border border-gray-700 px-3 h-10 rounded-md"
+          className="flex bg-black-200 text-gray-300 text-sm justify-center items-center gap-2 bg-color-bgDark border border-gray-700 px-3 h-10 rounded-md"
         >
           {" "}
           {skill.icon && (
