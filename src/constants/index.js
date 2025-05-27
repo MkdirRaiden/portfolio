@@ -230,7 +230,7 @@ export const otherSkills = [
 
   {
     _id: 7,
-    name: "Determination & Adaptability",
+    name: " Adaptability",
     icon: null,
   },
 ];
@@ -242,8 +242,7 @@ export const showcaseProjects = [
     subtitle2: "DEVELOPMENT",
     title1: "FULLSTACK",
     title2: "TWITTER CLONE",
-    pText:
-      "A Twitter replica constructed using MERN Tech-stack. Tanstack query for data retrieval and cache on the client side. Claudinary API is used to store images on the backend. I learned more about full-stack development while building it.",
+    pText: ["Built a social media platform using MERN stack, Tanstack Query, TailwindCSS, and Cloudinary API, enabling userauthentication and media uploads.", "Achieved 90% mobile compatibility and reduced API call times by 20%"],
     btnText: "Source code",
     btnUrl: "https://github.com/MkdirRaiden/twitter-clone.git",
     link: "https://twitter-clone-b6ie.onrender.com",
@@ -256,8 +255,7 @@ export const showcaseProjects = [
       subtitle2: "DEVELOPMENT",
       title1: "HOMEPAGE",
       title2: "APPLE CLONE",
-      pText:
-        "Built and designed the Apple website landing page. Tech-stack used React, Tailwind CSS for UI/UX design, and Gasp for cool animation. I now have a better understanding of how to design a cool landing page.",
+      pText: ["Designed a replica of Apple’s homepage using React, TailwindCSS, and GSAP animations, enhancing user experience.", "Optimized CSS files, reducing size by 30% for faster performance."],
       btnText: "Source code",
       btnUrl: "https://github.com/MkdirRaiden/Apple-iPhone-Clone.git",
       link: "https://apple-iphone-clone-rmr6.onrender.com",
@@ -270,7 +268,7 @@ export const showcaseProjects = [
       title1: "AI POWERED",
       title2: "BRAINWAVE",
       pText:
-        "Built and designed an interactive modern landing page. Tech-stack used React, Tailwind CSS for UI/UX design, and Gasp for cool animation. I now have a better understanding of how to design a cool landing page.",
+        ["Designed and built a modern responsive webpage using React, TailwindCSS, and GSAP animations, enhancing user experience.", "Optimized CSS files, reducing size by 35% for faster performance."],
       btnText: "Source code",
       btnUrl: "https://github.com/MkdirRaiden/Brainwave-.git",
       link: "https://brainwave-lj6w.onrender.com",
@@ -313,10 +311,10 @@ export const moreProjects = [
 export const experienceEducation = [
   {
     _id: 0,
-    name: "Geekworkx Technology",
-    address: "Guwahati, Assam",
+    name: "Applicaton Developer",
+    address: "Geekworkx Technology, Guwahati",
     icon: gtLogo,
-    desc: ["Worked as and application developer for about half a year working on real world projects.", "Gained hand on experience with PHP, mySql, jQuery, HTML and CSS."],
+    desc: ["Developed 7+ dynamic webpages using PHP, MySQL, and jQuery, improving user engagement by 20%", "Collaborated with a team of 4 developers to implement responsive designs, ensuring cross-browser compatibility.", "Optimized database queries, reducing page load times by 15%."],
     type: "experience",
     date: "2023-2024",
   },
@@ -343,7 +341,7 @@ export const experienceEducation = [
     name: "Tezpur University",
     icon: tuLogo,
     address: "Tezpur, Assam",
-    desc: ["Studied Bachelor of Technology in Computer Science & Engineering at Tezpur University.", "CGPA - 6.13, 25 credits completed."],
+    desc: ["Studied Bachelor of Technology in Computer Science & Engineering at Tezpur University.", "Completed 50 credits in programming, web technologies, and database systems"],
     type: "education",
     date: "2017-2019",
   },

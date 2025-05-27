@@ -148,9 +148,14 @@ const ShowcaseProject = ({
                 : ""
             }`}
           >
-            <p className=" text-gray-200 max-sm:mt-12 md:w-3/5 w-full mb-10">
-              {pText}
-            </p>
+            <ul
+              style={{ listStyleType: "circle" }}
+              className=" text-gray-200 max-sm:mt-12 md:w-4/5 w-full mb-10"
+            >
+              {pText.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
             <CustomButton
               href={btnUrl}
               text={btnText}

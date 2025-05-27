@@ -68,7 +68,7 @@ const Educaton = () => {
                 style={{ listStyleType: "circle", marginLeft: "1.25rem" }}
               >
                 {item.desc.map((item, idx) => {
-                  return idx === 2 ? (
+                  return idx === 2 && item.startsWith("https") ? (
                     <li key={item}>
                       <a
                         target="_blanck"
