@@ -91,7 +91,7 @@ const ShowcaseProject = ({
             _id === 0 ? "md:flex-row" : "md:flex-row-reverse"
           } flex flex-col justify-between max-sm:gap-10`}
         >
-          <div className="">
+          <div className="md:flex md:flex-col">
             <h2
               className={`${
                 _id === 1 || _id === 2 ? "md:text-end" : ""
@@ -126,7 +126,7 @@ const ShowcaseProject = ({
           </div>
           <div
             id={`titleShow${_id}`}
-            className=" md:text-[62px] text-3xl font-semibold md:w-3/5 w-full md:translate-y-4 opacity-0"
+            className=" md:text-[62px] text-3xl font-semibold md:w-3/5 w-4/5 md:translate-y-4 opacity-0"
           >
             <div className={styles.sectionHeadText}>{title1}</div>
             <div
@@ -150,7 +150,7 @@ const ShowcaseProject = ({
           >
             <ul
               style={{ listStyleType: "circle" }}
-              className=" text-gray-200 max-sm:mt-12 md:w-4/5 w-full mb-10"
+              className=" text-gray-200 max-sm:mt-12 max-sm:ml-4 md:w-4/5 w-full mb-10"
             >
               {pText.map((item) => (
                 <li key={item}>{item}</li>
