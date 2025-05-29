@@ -323,7 +323,7 @@ export const experienceEducation = [
     name: "Fundamentals of web development",
     icon: ibmLogo,
     address: "IBM SkillsBuild",
-    desc: ["Took a web development fundamental course and learned software development.", "Got familiarity with SDLC, agile development and Cloud computing.", "https://www.credly.com/badges/bfe91ce2-4dc9-4260-9b5d-72ce4f7ee345/public_url"],
+    desc: ["Took a web development fundamental course and learned software development.", "Got familiarity with SDLC, agile development and Cloud computing.", "https://tinyurl.com/52sjuamw"],
     type: "education",
     date: "2025"
   },
