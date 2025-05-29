@@ -290,11 +290,11 @@ export const moreProjects = [
 
   {
     _id: 2,
-    name: "React Webpage",
+    name: "Chat App",
     description:
-      "A React tailwind powered frontend app that I've built from scratch to gain a grasp of how React works.",
+      "A basic chat application built vanilla JavaScript, Node.js, Express.js, and Socket.io for real-time communication.",
     image: project2Img,
-    tech: ['#React', '#HTML', '#CSS', '#Gsap', '#TailwindCss'],
+    tech: ['#JavaScript', '#Nodejs', '#Socket.io'],
     link: "https://mkdirraiden.github.io/React-project02/",
   },
   {
@@ -314,7 +314,7 @@ export const experienceEducation = [
     name: "Applicaton Developer",
     address: "Geekworkx Technology, Guwahati",
     icon: gtLogo,
-    desc: ["Developed 7+ dynamic webpages using PHP, MySQL, and jQuery, improving user engagement by 20%", "Collaborated with a team of 4 developers to implement responsive designs, ensuring cross-browser compatibility.", "Optimized database queries, reducing page load times by 15%."],
+    desc: ["Developed 5+ dynamic webpages using PHP, MySQL, and jQuery, improving user engagement by 15%", "Collaborated with a team of 3 developers to implement responsive designs, ensuring cross-browser compatibility.", "Optimized database queries, reducing page load times by 10%."],
     type: "experience",
     date: "2023-2024",
   },
