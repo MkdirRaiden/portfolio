@@ -165,7 +165,7 @@ const ShowcaseProject = ({
           </div>
 
           <Parallax speed={3} className="md:w-3/5 wh-full">
-            <div className="w-full md:h-[22rem] h-48 relative">
+            <div className="w-full md:h-[22rem] h-44 relative">
               <div className="octagon skill-card-bg2 p-[0.05rem]">
                 <div className="octagon overflow-hidden opacity-75">
                   <video

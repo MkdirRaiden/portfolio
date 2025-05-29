@@ -102,7 +102,7 @@ const Header = () => {
       <div className="relative flex items-center py-4 md:px-32 px-4">
         <a
           id="logo"
-          className="-translate-y-8 opacity-0 flex items-center p-0 md:w-12 w-10  rounded-full bg-[#bf61ff]"
+          className="-translate-y-8 opacity-0 flex items-center p-0 md:w-12 w-10  rounded-full bg-[#804dee]"
           href="/"
         >
           <img
