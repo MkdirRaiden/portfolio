@@ -31,7 +31,7 @@ const Educaton = () => {
           EXPERIENCE & EDUCATIONS
         </h1>
       </div>
-      <div className="md:pt-40 ">
+      <div className="md:pt-40 max-sm -ml-5">
         <VerticalTimeline lineColor="#ffffff">
           {experienceEducation.map((item) => (
             <VerticalTimelineElement
@@ -50,7 +50,7 @@ const Educaton = () => {
               }
             >
               <div className="flex gap-2 items-center">
-                <div className="rounded-full w-12 h-12 overflow-hidden">
+                <div className="rounded-full w-10 h-10 overflow-hidden">
                   <img
                     width={"100%"}
                     height={"100%"}
@@ -59,8 +59,12 @@ const Educaton = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-blue-600">{item.name}</h3>
-                  <h4 className="text-orange-400">{item.address}</h4>
+                  <h3 className="font-bold text-blue-600 max-sm:text-sm">
+                    {item.name}
+                  </h3>
+                  <h6 className="text-orange-400 max-sm:text-xs text-sm">
+                    {item.address}
+                  </h6>
                 </div>
               </div>
               <ul
