@@ -295,7 +295,7 @@ export const moreProjects = [
       "A basic chat application built vanilla JavaScript, Node.js, Express.js, and Socket.io for real-time communication.",
     image: project2Img,
     tech: ['#JavaScript', '#Nodejs', '#Socket.io'],
-    link: "https://mkdirraiden.github.io/React-project02/",
+    link: "https://chat-app-i0p1.onrender.com",
   },
   {
     _id: 1,
