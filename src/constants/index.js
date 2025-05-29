@@ -292,7 +292,7 @@ export const moreProjects = [
     _id: 2,
     name: "Chat App",
     description:
-      "A basic chat application built vanilla JavaScript, Node.js, Express.js, and Socket.io for real-time communication.",
+      "A basic chat application built with vanilla JavaScript, Node.js, Express.js, and Socket.io for real-time communication.",
     image: project2Img,
     tech: ['#JavaScript', '#Nodejs', '#Socket.io'],
     link: "https://chat-app-i0p1.onrender.com",
