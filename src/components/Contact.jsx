@@ -32,7 +32,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="border-t-4 md:min-h-[120vh] min-h-[110vh] text-gray-300 border-white md:px-32 px-4 md:py-20 py-10 relative"
+      className="border-t-4 md:min-h-[120vh] min-h-[100vh] text-gray-300 border-white md:px-32 px-4 md:py-20 py-10 relative"
     >
       {/* <div className="absolute left-0 top-0 wh-full">
         <img className="wh-full" src={contactBg} alt="bg image" />

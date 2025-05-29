@@ -50,7 +50,7 @@ const Educaton = () => {
               }
             >
               <div className="flex gap-2 items-center">
-                <div className="rounded-full w-10 h-10 overflow-hidden">
+                <div className="rounded-full md:w-12 md:h-12 w-6 h-6 overflow-hidden">
                   <img
                     width={"100%"}
                     height={"100%"}
@@ -59,7 +59,7 @@ const Educaton = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-blue-600 max-sm:text-sm">
+                  <h3 className="font-bold text-blue-600 max-sm:text-xs">
                     {item.name}
                   </h3>
                   <h6 className="text-orange-400 max-sm:text-xs text-sm">

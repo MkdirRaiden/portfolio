@@ -13,7 +13,7 @@
   color-scheme: dark;
 }
 
-.navLink{
+.navLink {
   @apply opacity-70 hover:opacity-90;
 }
 
@@ -36,7 +36,11 @@
 .violet-gradient {
   background: #804dee;
   background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(
+    -90deg,
+    #804dee 0%,
+    rgba(60, 51, 80, 0) 100%
+  );
 }
 
 .green-pink-gradient {
@@ -51,7 +55,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity by modifying the last value (0.5 in this case) */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity by modifying the last value (0.5 in this case) */
   z-index: 9999; /* Adjust the z-index to ensure it's displayed above other elements if necessary */
 }
 
@@ -74,61 +83,91 @@
   z-index: -1;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
   border: none;
   background-color: transparent;
   color: black;
-  transition: .25s ease;
+  transition: 0.25s ease;
 }
 .inputClass {
   border: 3px solid #618dfb;
   background-color: whitesmoke;
 }
-.inputClass:focus{
+.inputClass:focus {
   border-width: 2px;
 }
 
 .common-padding {
-  @apply py-10 md:px-32 md:py-28 px-4 ;
+  @apply py-10 md:px-32 md:py-28 px-4;
 }
 .wh-full {
   @apply w-full h-full;
 }
 
-  .skill-card-bg1 {
-    background-image: linear-gradient(to right bottom, #050816, #050816, #343333, #a1bbff, #4479fd);
-  }
-  .skill-card-bg2 {
-    background-image: linear-gradient(to bottom, #050816, #050816, #343333, #a1bbff, #4479fd);
-  }
-  .skill-card-bg3 {
-    background-image: linear-gradient(to left bottom, #050816, #050816, #343333, #a1bbff, #4479fd);
-  }
-  .card-wrap {
-    filter: drop-shadow(1px 26px 60px rgba(77, 77, 67, 0.5));
-  }
+.skill-card-bg1 {
+  background-image: linear-gradient(
+    to right bottom,
+    #050816,
+    #050816,
+    #343333,
+    #a1bbff,
+    #4479fd
+  );
+}
+.skill-card-bg2 {
+  background-image: linear-gradient(
+    to bottom,
+    #050816,
+    #050816,
+    #343333,
+    #a1bbff,
+    #4479fd
+  );
+}
+.skill-card-bg3 {
+  background-image: linear-gradient(
+    to left bottom,
+    #050816,
+    #050816,
+    #343333,
+    #a1bbff,
+    #4479fd
+  );
+}
+.card-wrap {
+  filter: drop-shadow(1px 26px 60px rgba(77, 77, 67, 0.5));
+}
 
 .primary-outline-path {
   stroke-dasharray: 0, 0, 0, 518.179;
   stroke-dashoffset: 0%;
   stroke-width: 1;
-  stroke:white;
+  stroke: white;
   opacity: 0.35;
   animation: animate 2.25s ease forwards;
-  transition:  ease ;
+  transition: ease;
 }
 
-.primary-outline:hover > path{
-  opacity: .85;
+.primary-outline:hover > path {
+  opacity: 0.85;
   stroke: #a1bbff;
-
 }
 
 .octagon {
   width: 100%;
   height: 100%;
-  clip-path: polygon(8% 0%, 92% 0%, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0% 92%, 0% 8%);
+  clip-path: polygon(
+    8% 0%,
+    92% 0%,
+    100% 8%,
+    100% 92%,
+    92% 100%,
+    8% 100%,
+    0% 92%,
+    0% 8%
+  );
   border-radius: 10%;
 }
 
@@ -147,10 +186,10 @@ input, textarea {
 }
 
 .hero-bg-animate {
-  animation: heroAnimate .5s ease forwards;
+  animation: heroAnimate 0.5s ease forwards;
 }
 .hero-title-animate {
-  animation: heroTitleAnimate .5s ease;
+  animation: heroTitleAnimate 0.5s ease;
 }
 
 @keyframes animate {
@@ -160,7 +199,7 @@ input, textarea {
 }
 
 @keyframes heroAnimate {
-  0%{
+  0% {
     transform: scale(2);
   }
   100% {
@@ -168,7 +207,7 @@ input, textarea {
   }
 }
 @keyframes heroTitleAnimate {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(-3.5rem);
   }
@@ -178,12 +217,12 @@ input, textarea {
   }
 }
 @keyframes animateShuttle {
-  0%{
+  0% {
     scale: 1;
     transform: translate(0%, 0%);
   }
   100% {
-    scale: .35;
+    scale: 0.35;
     transform: translate(-20%, -10%);
   }
 }

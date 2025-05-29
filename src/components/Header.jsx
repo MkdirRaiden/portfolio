@@ -46,7 +46,7 @@ const Header = () => {
   useGSAP(() => {
     gsap.to("#logo", {
       y: 0,
-      opacity: 1,
+      opacity: 0.5,
       delay: 0.25,
       duration: 0.75,
       ease: "power1.inOut",
@@ -102,7 +102,7 @@ const Header = () => {
       <div className="relative flex items-center py-4 md:px-32 px-4">
         <a
           id="logo"
-          className="-translate-y-8 opacity-0 flex items-center gap-2 md:w-12 w-10"
+          className="-translate-y-8 opacity-0 flex items-center p-0 md:w-12 w-10  rounded-full bg-[#bf61ff]"
           href="/"
         >
           <img
