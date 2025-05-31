@@ -20,7 +20,7 @@ const Hero = () => {
           </h1>
           <div className={`${styles.heroSubText} mt-2`}>
             I do
-            <div className="text-orange-300">
+            <div className="text-orange-200">
               <Typewriter
                 options={{
                   strings: [
