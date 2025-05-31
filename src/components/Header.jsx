@@ -74,10 +74,9 @@ const Header = () => {
   const downloadPdf = async () => {
     setIsDownloading(true);
     try {
-      const response = await axios.get("Muktadir.pdf", {
-        responseType: "blob",
-      });
-      const pdfBlob = new Blob([response.data], { type: "application/pdf" });
+      const response = await fetch("/Muktadir.pdf");
+      if (!response.ok) throw new Error("Failed to fetch resume");
+      const pdfBlob = await response.blob();
       const pdfUrl = window.URL.createObjectURL(pdfBlob);
       const tempLink = document.createElement("a");
       tempLink.href = pdfUrl;
