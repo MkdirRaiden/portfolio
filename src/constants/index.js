@@ -244,8 +244,8 @@ export const showcaseProjects = [
     title2: "TWITTER CLONE",
     pText: ["Built a social media platform using MERN stack, Tanstack Query, TailwindCSS, and Cloudinary API, enabling userauthentication and media uploads.", "Achieved 90% mobile compatibility and reduced API call times by 20%"],
     btnText: "Source code",
-    btnUrl: "https://github.com/MkdirRaiden/twitter-clone.git",
-    link: "https://twitter-clone-b6ie.onrender.com",
+    btnUrl: "https://github.com/MkdirRaiden/twitter-clone-backend.git",
+    link: "https://twitter-clone-client-gray.vercel.app/",
     video: twitterVideoSrc,
   },
   [
