@@ -7,7 +7,6 @@ import { heroNavImg, newLogoImg } from "../utils";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { enablePageScroll, disablePageScroll } from "scroll-lock";
-import axios from "axios";
 import toast from "react-hot-toast";
 
 const Header = () => {
@@ -93,7 +92,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed left-0 top-0 right-0 w-full z-10">
+    <header className="fixed left-0 top-0 right-0 w-full z-10 bg-primary">
       <div
         id="header-bg"
         className="absolute bg-primary/90 w-full h-[0%]"
@@ -163,7 +162,7 @@ const Header = () => {
           disabled={isDownloading}
         >
           {isDownloading ? (
-            <span className="text-sm text-gray-300">Loading...</span>
+            <span className="text-sm text-gray-300">opening...</span>
           ) : (
             <FaDownload />
           )}

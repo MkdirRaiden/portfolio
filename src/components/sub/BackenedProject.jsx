@@ -26,34 +26,31 @@ const BackenedProject = () => {
       },
     });
   }, []);
+
+  const project = TwitterProject[0];
+
   return (
-    <div className="md:py-20 py-16">
+    <section className="md:py-20 py-16">
       <div className="flex md:flex-row flex-col justify-between max-sm:gap-20">
         <h2 className="font-Gustavo md:w-2/5 w-full">
-          {TwitterProject[0].h2_1}
+          {project.h2_1}
           <br />
-          {TwitterProject[0].h2_2}
+          {project.h2_2}
         </h2>
         <div
           id="projects-title1"
           className="font-Gustavo md:text-[62px] text-3xl font-semibold md:w-3/5 w-full md:translate-y-8 opacity-0"
         >
-          <div>{TwitterProject[0].h1_1}</div>
-          <div className="text-end md:translate-y-5">
-            {TwitterProject[0].h1_2}
-          </div>
+          <div>{project.h1_1}</div>
+          <div className="text-end md:translate-y-5">{project.h1_2}</div>
         </div>
       </div>
       <div className="flex md:flex-row flex-col-reverse md:mt-36 mt-10">
         <div className="md:w-2/5 w-full">
-          <p className=" text-color-tertiary max-sm:mt-10 md:w-3/5 w-full mb-10">
-            {TwitterProject[0].pText}
+          <p className="text-color-tertiary max-sm:mt-10 md:w-3/5 w-full mb-10">
+            {project.pText}
           </p>
-          <CustomButton
-            text={TwitterProject[0].buttonText}
-            width={"200px"}
-            height={"80px"}
-          />
+          <CustomButton text={project.buttonText} width="200px" height="80px" />
         </div>
 
         <Parallax
@@ -63,20 +60,20 @@ const BackenedProject = () => {
           <div
             id="projects-image1"
             className="absolute bottom-0 left-0 right-0 w-full h-full bg-color-bgDark"
-          ></div>
+          />
           <video
             id="video1"
             className="pointer-events-none"
             preload="auto"
-            playsInline={true}
+            playsInline
             muted
-            autoPlay={true}
+            autoPlay
           >
-            <source src={TwitterProject[0].video} type="video/mp4" />
+            <source src={project.video} type="video/mp4" />
           </video>
         </Parallax>
       </div>
-    </div>
+    </section>
   );
 };
 

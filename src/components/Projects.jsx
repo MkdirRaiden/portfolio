@@ -7,7 +7,9 @@ import FrontendProject from "./sub/FrontendProject";
 const Projects = () => {
   const [projectNo, setProjectNo] = useState(0);
 
-  const project = showcaseProjects[1][projectNo];
+  // Access the selected frontend project safely
+  const frontendProjects = Array.isArray(showcaseProjects[1]) ? showcaseProjects[1] : [];
+  const project = frontendProjects[projectNo];
 
   return (
     <section id="projects" className="min-h-[100vh] common-padding">
@@ -30,7 +32,8 @@ const Projects = () => {
             </div>
           )
       )}
-      <FrontendProject project={project} setProjectNo={setProjectNo} />
+
+      {project && <FrontendProject project={project} setProjectNo={setProjectNo} />}
       <MoreProject />
     </section>
   );

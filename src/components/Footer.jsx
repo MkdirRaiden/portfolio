@@ -1,11 +1,9 @@
-import React from "react";
 import { navLinkItems } from "../constants";
 import Button from "./sub/Button";
 import {
   FaFacebook,
   FaLinkedin,
   FaInstagram,
-  FaWhatsapp,
   FaRegCopyright,
   FaGithub,
 } from "react-icons/fa";

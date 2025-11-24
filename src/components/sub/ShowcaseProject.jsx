@@ -1,8 +1,8 @@
+import { useEffect, useRef, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import CustomButton from "./CustomButton";
 import gsap from "../../utils/gsap";
 import { useGSAP } from "@gsap/react";
-import { useEffect, useRef, useState } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { styles } from "../../styles";
 
@@ -30,6 +30,7 @@ const ShowcaseProject = ({
   const { startPlay, isPlaying, videoId } = video;
   const [loadedData, setLoadedData] = useState(false);
 
+  // GSAP animations on mount and when videoId changes
   useGSAP(() => {
     gsap.to(`#video${_id}`, {
       scrollTrigger: {
@@ -37,8 +38,8 @@ const ShowcaseProject = ({
         toggleActions: "restart none none none",
       },
       onStart: () =>
-        setVideo((pre) => ({
-          ...pre,
+        setVideo((prev) => ({
+          ...prev,
           startPlay: true,
           isPlaying: true,
         })),
@@ -66,36 +67,37 @@ const ShowcaseProject = ({
     });
   }, [videoId]);
 
+  // Play/pause video based on loaded state and flags
   useEffect(() => {
-    if (loadedData) {
-      if (!isPlaying) {
-        videoRef.current.pause();
+    if (loadedData && videoRef.current) {
+      if (isPlaying) {
+        if (startPlay) videoRef.current.play();
       } else {
-        startPlay && videoRef.current.play();
+        videoRef.current.pause();
       }
     }
-  }, [loadedData, startPlay, isPlaying, videoId]);
+  }, [loadedData, startPlay, isPlaying]);
 
+  // Handler to change selected project and video ID
   const handleChange = (param) => {
     setProjectNo(param);
-    setVideo((pre) => ({ ...pre, videoId: param + 1 }));
+    setVideo((prev) => ({ ...prev, videoId: param + 1 }));
   };
 
-  const button = () => {};
-
   return (
-    <div className=" min-h-[110vh] pb-16">
+    <section className="min-h-[110vh] pb-16">
       <div>
         <div
-          className={`${
+          className={`flex flex-col justify-between max-sm:gap-10 ${
             _id === 0 ? "md:flex-row" : "md:flex-row-reverse"
-          } flex flex-col justify-between max-sm:gap-10`}
+          }`}
         >
+          {/* Subtitle and navigation buttons */}
           <div className="md:flex md:flex-col">
             <h2
               className={`${
                 _id === 1 || _id === 2 ? "md:text-end" : ""
-              }  md:w-fit w-full ${styles.sectionSubText}`}
+              } md:w-fit w-full ${styles.sectionSubText}`}
             >
               <span>{subTitle1}</span>
               <br />
@@ -103,67 +105,58 @@ const ShowcaseProject = ({
             </h2>
             {_id !== 0 && (
               <div className="flex justify-center items-center gap-2 mt-2 md:ml-auto w-20 h-10">
-                <button
-                  disabled={videoId === 1}
-                  onClick={() => handleChange(0)}
-                  className={`${
-                    videoId === 1 ? "text-black-200 bg-white" : ""
-                  } hexagon-v font-Gustavo font-bold`}
-                >
-                  1
-                </button>
-                <button
-                  disabled={videoId === 2}
-                  onClick={() => handleChange(1)}
-                  className={`${
-                    videoId === 2 ? "text-black-200 bg-white" : ""
-                  } hexagon-v font-Gustavo font-bold`}
-                >
-                  2
-                </button>
+                {[0, 1].map((idx) => (
+                  <button
+                    key={idx}
+                    disabled={videoId === idx + 1}
+                    onClick={() => handleChange(idx)}
+                    className={`hexagon-v font-Gustavo font-bold ${
+                      videoId === idx + 1 ? "text-black-200 bg-white" : ""
+                    }`}
+                  >
+                    {idx + 1}
+                  </button>
+                ))}
               </div>
             )}
           </div>
+
+          {/* Project Titles */}
           <div
             id={`titleShow${_id}`}
-            className=" md:text-[62px] text-3xl font-semibold md:w-3/5 w-4/5 md:translate-y-4 opacity-0"
+            className="md:text-[62px] text-3xl font-semibold md:w-3/5 w-4/5 md:translate-y-4 opacity-0"
           >
             <div className={styles.sectionHeadText}>{title1}</div>
-            <div
-              className={`text-end md:translate-y-5 ${styles.sectionHeadText}`}
-            >
+            <div className={`text-end md:translate-y-5 ${styles.sectionHeadText}`}>
               {title2}
             </div>
           </div>
         </div>
+
+        {/* Video and description section */}
         <div
-          className={`flex ${
+          className={`flex flex-col-reverse md:mt-28 mt-10 ${
             _id === 0 ? "md:flex-row" : "md:flex-row-reverse"
-          } flex-col-reverse md:mt-28 mt-10`}
+          }`}
         >
+          {/* Text and Button */}
           <div
             className={`md:w-2/5 w-full ${
-              _id === 1 || _id === 2
-                ? "md:flex md:flex-col md:items-end md:[&>p]:text-end"
-                : ""
+              _id === 1 || _id === 2 ? "md:flex md:flex-col md:items-end md:[&>p]:text-end" : ""
             }`}
           >
             <ul
               style={{ listStyleType: "circle" }}
-              className=" text-gray-200 max-sm:mt-12 max-sm:ml-4 md:w-4/5 w-full mb-10"
+              className="text-gray-200 max-sm:mt-12 max-sm:ml-4 md:w-4/5 w-full mb-10"
             >
               {pText.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <CustomButton
-              href={btnUrl}
-              text={btnText}
-              width={200}
-              height={60}
-            />
+            <CustomButton href={btnUrl} text={btnText} width={200} height={60} />
           </div>
 
+          {/* Video and call to action */}
           <Parallax speed={3} className="md:w-3/5 wh-full">
             <div className="w-full md:h-[22rem] h-44 relative">
               <div className="octagon skill-card-bg2 p-[0.05rem]">
@@ -174,7 +167,7 @@ const ShowcaseProject = ({
                     id={`video${_id}`}
                     className="pointer-events-none"
                     preload="auto"
-                    playsInline={true}
+                    playsInline
                     muted
                     onLoadedMetadata={() => setLoadedData(true)}
                   >
@@ -193,6 +186,7 @@ const ShowcaseProject = ({
                   className="octagon py-2 max-w-fit text-lg inline-flex items-center text-blue-600 hover:cursor-pointer"
                   href={link}
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span className="me-4">Visit website</span>{" "}
                   <FaArrowUpRightFromSquare />
@@ -203,7 +197,8 @@ const ShowcaseProject = ({
           </Parallax>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
+
 export default ShowcaseProject;

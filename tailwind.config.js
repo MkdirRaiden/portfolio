@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./public/assets/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/assets/**/*.{js,ts,jsx,tsx}", // if you have assets here
   ],
   theme: {
     extend: {
@@ -15,9 +14,7 @@ export default {
         'black-100': '#100d25',
         'black-200': '#090325',
         'white-100': '#f3f3f3',
-        stroke: {
-          1: "#26242C",
-        },
+        'stroke-1': '#26242C', // flattened key for stroke
       },
       boxShadow: {
         card: '0 35px 120px -15px #211e35',
@@ -26,32 +23,9 @@ export default {
         xs: '450px',
       },
       backgroundImage: {
-        'hero-pattern': `url(/herobg.png)`,
+        'hero-pattern': "url('/herobg.png')",
       },
     },
   },
-  // theme: {
-  //   extend: {
-  //     colors: {
-  //       color: {
-  //         primary: "#4479fd",
-  //         secondary: "#a1bbff",
-  //         tertiary: "#a2a4aa",
-  //         bgLtDark: "#111111",
-  //         bgDark: "#000000",
-  //         heroBg: "rgba(31, 31, 31, .75)",
-  //       },
-  //       stroke: {
-  //         1: "#26242C",
-  //       },
-  //     },
-
-  //     fontFamily: {
-  //       playfair: "var(--font-playfair)",
-  //       poppins: "var(--font-poppins)",
-  //       Gustavo: ["Gustavo-regular", "sans-serif"],
-  //     },
-  //   },
-  // },
   plugins: [],
 };

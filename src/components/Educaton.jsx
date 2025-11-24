@@ -9,12 +9,13 @@ import { MdOutlineWork } from "react-icons/md";
 import { GoStarFill } from "react-icons/go";
 import { styles } from "../styles";
 
-const Educaton = () => {
+const Education = () => {
   return (
     <section
       id="educations"
       className="md:px-32 px-4 md:mt-36 mt-40 relative bg-gray-100 min-h-[100vh]"
     >
+      {/* Header for desktop */}
       <div className="curve md:block hidden bg-primary w-[75%] h-44 -top-4 left-[50%] -translate-x-[50%] absolute">
         <div className={`${styles.sectionSubText} md:text-center`}>
           WHAT I HAVE DONE SO FAR
@@ -23,14 +24,15 @@ const Educaton = () => {
           EXPERIENCE & EDUCATIONS
         </h1>
       </div>
+
+      {/* Header for mobile */}
       <div className="md:hidden block scale-y-105 px-5 bg-primary w-full h-[4.85rem] -top-40 left-0 absolute">
-        <div className={`${styles.sectionSubText}`}>
-          WHAT I HAVE DONE SO FAR
-        </div>
+        <div className={`${styles.sectionSubText}`}>WHAT I HAVE DONE SO FAR</div>
         <h1 className={`${styles.sectionHeadText} text-[1.25rem]`}>
           EXPERIENCE & EDUCATIONS
         </h1>
       </div>
+
       <div className="md:pt-40 max-sm -ml-5">
         <VerticalTimeline lineColor="#ffffff">
           {experienceEducation.map((item) => (
@@ -38,54 +40,45 @@ const Educaton = () => {
               key={item._id}
               className="font-poppins font-medium"
               contentStyle={{ background: "#ffffff", color: "#000000" }}
-              contentArrowStyle={{ borderRight: "7px solid  #ffffff" }}
+              contentArrowStyle={{ borderRight: "7px solid #ffffff" }}
               date={item.date}
               iconStyle={{ background: "#4479fd", color: "#ffffff" }}
-              icon={
-                item.type === "experience" ? (
-                  <MdOutlineWork />
-                ) : (
-                  <FaGraduationCap />
-                )
-              }
+              icon={item.type === "experience" ? <MdOutlineWork /> : <FaGraduationCap />}
             >
               <div className="flex gap-2 items-center">
                 <div className="rounded-full md:w-12 md:h-12 w-6 h-6 overflow-hidden">
                   <img
-                    width={"100%"}
-                    height={"100%"}
+                    width="100%"
+                    height="100%"
                     src={item.icon}
-                    alt="icon"
+                    alt={`${item.type} icon`}
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-blue-600 max-sm:text-xs">
-                    {item.name}
-                  </h3>
-                  <h6 className="text-orange-400 max-sm:text-xs text-sm">
-                    {item.address}
-                  </h6>
+                  <h3 className="font-bold text-blue-600 max-sm:text-xs">{item.name}</h3>
+                  <h6 className="text-orange-400 max-sm:text-xs text-sm">{item.address}</h6>
                 </div>
               </div>
               <ul
                 className="opacity-50 text-sm py-4"
                 style={{ listStyleType: "circle", marginLeft: "1.25rem" }}
               >
-                {item.desc.map((item, idx) => {
-                  return idx === 2 && item.startsWith("https") ? (
-                    <li key={item}>
+                {item.desc.map((descItem, idx) => (
+                  descItem.startsWith("https") && idx === 2 ? (
+                    <li key={descItem}>
                       <a
-                        target="_blanck"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-blue-600 text-sm hover:opacity-70"
-                        href={item}
+                        href={descItem}
                       >
-                        {item}
+                        {descItem}
                       </a>
                     </li>
                   ) : (
-                    <li key={item}>{item}</li>
-                  );
-                })}
+                    <li key={descItem}>{descItem}</li>
+                  )
+                ))}
               </ul>
             </VerticalTimelineElement>
           ))}
@@ -99,4 +92,4 @@ const Educaton = () => {
   );
 };
 
-export default Educaton;
+export default Education;
