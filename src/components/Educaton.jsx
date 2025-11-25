@@ -7,7 +7,7 @@ import { experienceEducation } from "../constants";
 import { FaGraduationCap } from "react-icons/fa6";
 import { MdOutlineWork } from "react-icons/md";
 import { GoStarFill } from "react-icons/go";
-import { styles } from "../styles";
+import { styles } from "../css/styles";
 
 const Education = () => {
   return (

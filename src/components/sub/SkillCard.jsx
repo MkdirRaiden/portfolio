@@ -1,6 +1,6 @@
-import SkillItems from "./sub/SkillItems";
+import SkillItems from "./SkillItems";
 import { useRef } from "react";
-import gsap from "../utils/gsap";
+import gsap from "../../utils/gsap";
 import { useGSAP } from "@gsap/react";
 
 const SkillCard = ({ arr, title, bg, ndx }) => {

@@ -2,7 +2,7 @@ import { BsFillSendFill } from "react-icons/bs";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
-import { styles } from "../styles";
+import { styles } from "../css/styles";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);

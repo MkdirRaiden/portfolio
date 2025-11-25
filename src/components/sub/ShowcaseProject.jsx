@@ -4,7 +4,7 @@ import CustomButton from "./CustomButton";
 import gsap from "../../utils/gsap";
 import { useGSAP } from "@gsap/react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { styles } from "../../styles";
+import { styles } from "../../css/styles";
 
 const ShowcaseProject = ({
   subTitle1,

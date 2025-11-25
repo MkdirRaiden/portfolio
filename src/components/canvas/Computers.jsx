@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader";
 import * as THREE from "three";
-import CanvasLoader from "../Loader";
+import CanvasLoader from "../sub/Loader";
 
 const ComputerModel = ({ isMobile }) => {
   const { scene } = useGLTF(

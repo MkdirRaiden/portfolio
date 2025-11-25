@@ -1,6 +1,6 @@
 import { backenedSkills, frontendSkills, otherSkills } from "../constants";
-import { asteroidImg } from "../utils";
-import SkillCard from "./SkillCard";
+import asteroidImg  from "/images/asteroid.png";
+import SkillCard from "./sub/SkillCard";
 import MotionSvg from "./svgs/MotionSvg";
 import { Parallax } from "react-scroll-parallax";
 
